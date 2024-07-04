@@ -241,8 +241,8 @@
     {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
-      "highlights": ["Astro","CSS"],
-      "url": "https://miduconf.com"
+      "highlights": ["Astro","Typescript","CSS","Ninja Key"],
+      "url": "https://monumental-youtiao-5271e8.netlify.app"
     }
   ]
 }
