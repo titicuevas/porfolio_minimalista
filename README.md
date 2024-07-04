@@ -1,6 +1,6 @@
-# Portafolio Minimalista
+# Portfolio  Minimalista
 
-Este es un proyecto de un portafolio minimalista creado con las siguientes tecnologías:
+Este es un proyecto de un portfolio  minimalista creado con las siguientes tecnologías:
 
 - **Astro** - El framework web de la nueva época.
 - **TypeScript** - JavaScript con sintaxis de tipado.
@@ -25,7 +25,7 @@ Este es un proyecto de un portafolio minimalista creado con las siguientes tecno
 
 2. Añade tu contenido:
 
-    Edita el archivo `cv.json` para crear tu propio Portafolio/CV imprimible.
+    Edita el archivo `cv.json` para crear tu propio Portfolio /CV imprimible.
 
 3. Lanza el servidor de desarrollo:
 

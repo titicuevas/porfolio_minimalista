@@ -5,8 +5,8 @@
     "image": "/me.webp",
     "email": "enriquecuegarcia@gmail.com",
     "phone": "+34 661096250",
-    "url": "https://midu.dev",
-    "summary": "Desarrollador web apasionado en la tecnología u especialización en aplicaciones web. Destaco por mi capacidad para trabajar en equipo, mi actitud proactiva. Aunque tenga poca experiencia laboral, estoy preparado para enfrentarme a cualquier reto que se me presente y contribuir con determinación y esfuerzo a la empresa que me contrate.",
+    "url": "https://github.com/titicuevas",
+    "summary": "Soy un amante de la tecnología y un desarrollador de aplicaciones web. Algunas de mis habilidades sobresalientes son el trabajo en equipo y mi actitud proactiva. Aunque tengo poca experiencia laboral, puedo asegurarle que con mi determinación y esfuerzo, seré capaz de superar cualquier dificultad y seré un valioso activo para la empresa. Siempre estoy aprendiendo nuevos lenguajes de programación y luego los aplico en una variedad de proyectos para mantener mi portfolio  actualizado.",
     "location": {
       "address": "",
       "postalCode": "11540",
@@ -28,15 +28,6 @@
     ]
   },
   "work": [
-    {
-      "name": "Programador en desarrollo",
-      "position": "Web developer",
-      "startDate": "2017-01-01",
-      "endDate": null,
-      "summary": "Estoy continuamente aprendiendo nuevos lenguajes y aplicando esos conocimientos en diversos proyectos, con el objetivo de enriquecer mi portafolio.",
-      "highlights": ["Started the company"],
-      "url": "https://github.com/titicuevas"
-    },
     {
       "name": "Ayuntamiento de Sanlucar de Barrameda",
       "position": "Web developer",
@@ -179,24 +170,12 @@
       "fluency": "Advanced"
     }
   ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
   "projects": [
     {
       "name": "Sportbuddy",
       "isActive": true,
       "description": "Aplicacion web, para crear eventos deportivos y unirse a ellos.",
-      "highlights": ["Creador de Eventos deportivos","PHP, Laravel, Alpine.js, Tailwind CSS, PostgreSQL, PayPal"],
+      "highlights": ["Creador de Eventos deportivos","PHP", "Laravel", "Alpine.js", "Tailwind CSS", "PostgreSQL", "PayPal"],
       "url": "https://github.com/titicuevas/SportBuddy",
       "github":"https://github.com/titicuevas/SportBuddy"
     },
