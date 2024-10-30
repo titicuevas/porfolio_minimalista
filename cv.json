@@ -29,13 +29,25 @@
   },
   "work": [
     {
+      "name": "Squirrel Media",
+      "position": "Desarrollador Web",
+      "startDate": "2024-09",
+      "endDate": "Actualmente",
+      "summary": "Desarrollo de proyectos audiovisuales de series, películas y canales de televisión mediante el uso de HTML, CSS y JavaScript. Creación de interfaces de usuario optimizadas para mejorar la experiencia visual y la usabilidad en múltiples plataformas. Implementación de soluciones tecnológicas innovadoras para maximizar el rendimiento y la accesibilidad de los productos.",
+      "highlights": [
+        "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
+      ],
+      "url": "https://squirrelmedia.es/"
+    },
+
+    {
       "name": "Ayuntamiento de Sanlucar de Barrameda",
       "position": "Web developer",
       "startDate": "2023-09-10",
       "endDate": "2024-02-10",
       "summary": "He creado una API en PHP para el departamento de Control de Calidad de los Animales que puede interactuar con una base de datos MySQL. También he agregado la capacidad de ver y actualizar datos en WordPress para proporcionar accesibilidad y usabilidad. También he creado soluciones de tecnología que se integran por completo.",
       "highlights": ["Started the company"],
-      "url":"https://www.sanlucardebarrameda.es/"
+      "url": "https://www.sanlucardebarrameda.es/"
     },
     {
       "name": "Sportbuddy",
@@ -44,10 +56,10 @@
       "endDate": "2024-02-13",
       "summary": "Desarrollé una aplicación destinada a la coordinación de eventos deportivos. En el back-end, trabajé con PHP y el framework Laravel usando su inyección de dependencias, ORM y muchas otras instalaciones útiles que proporciona este framework. En el front-end, utilicé Alpine.js para la interactividad y Tailwind CSS para el diseño para hacer una interfaz elegante y fácil de usar. Incluí una pasarela de pago a través de PayPal. En la gestión de datos, use PostgreSQL, lo que ayudó a hacer el sistema más sólido y escalable. Estas habilidades se refinaron en la gestión de productos que son totalmente integrados desde la fuente hasta el consumidor.",
       "highlights": ["Started the company"],
-      "url":"https://github.com/titicuevas/SportBuddy"
+      "url": "https://github.com/titicuevas/SportBuddy"
     }
   ],
-  
+
   "education": [
     {
       "institution": "Ies Doñana",
@@ -175,37 +187,40 @@
       "name": "Sportbuddy",
       "isActive": true,
       "description": "Aplicacion web, para crear eventos deportivos y unirse a ellos.",
-      "highlights": ["Creador de Eventos deportivos","PHP", "Laravel", "Alpine.js", "Tailwind CSS", "PostgreSQL", "PayPal"],
+      "highlights": [
+        "Creador de Eventos deportivos",
+        "PHP",
+        "Laravel",
+        "Alpine.js",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "PayPal"
+      ],
       "url": "https://github.com/titicuevas/SportBuddy",
-      "github":"https://github.com/titicuevas/SportBuddy"
+      "github": "https://github.com/titicuevas/SportBuddy"
     },
     {
       "name": "Tic-Tac-Toe",
       "isActive": true,
       "description": "Juego de tres en raya usando React-Vite JavaScript",
-      "highlights": [
-        "Juego",
-        "2 jugadores",
-        "React",
-        "JavaScript"
-      ],
-      "url":"https://6656145a6384e16642927762--superlative-sherbet-07343b.netlify.app/",
+      "highlights": ["Juego", "2 jugadores", "React", "JavaScript"],
+      "url": "https://6656145a6384e16642927762--superlative-sherbet-07343b.netlify.app/",
 
-     "github":"https://github.com/titicuevas/Curso_React/tree/main/project/02-tic-tac-toe"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/02-tic-tac-toe"
     },
     {
       "name": "Mouse Follow Effect",
       "isActive": true,
       "description": "Efecto de seguimiento del raton al pulsar un boton",
-      "highlights": ["React","JavaScript", "CSS"],
+      "highlights": ["React", "JavaScript", "CSS"],
       "url": "https://665615116384e1682092772e--velvety-stardust-5ddb6f.netlify.app/",
-      "github":"https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower"
     },
     {
       "name": "Buscador de Peliculas",
       "isActive": true,
       "description": "Buscador de peliculas, consumiendo una API y traduccion de la descripcion de las peliculas",
-      "highlights": ["React","JavaScript","API"],
+      "highlights": ["React", "JavaScript", "API"],
       "url": "https://comfy-lolly-03f554.netlify.app/",
       "github": "https://github.com/titicuevas/Curso_React/tree/main/project/05-react-buscador-peliculas"
     },
@@ -213,14 +228,29 @@
       "name": "Carrito de la compra",
       "isActive": true,
       "description": "Carro de la compra , para diferentes articulos, con filtros",
-      "highlights": ["React","JavaScript"],
+      "highlights": ["React", "JavaScript"],
       "url": "https://chimerical-sherbet-7cc80b.netlify.app/",
       "github": "https://github.com/titicuevas/Curso_React/tree/main/project/06-Spopping-Cart"
     },
     {
+      "name": "Traductor de Idiomas",
+      "description": "Traductor de idiomas utilizando la API de DeepL para ofrecer traducciones precisas y rápidas, con diseño responsivo en React y JavaScript.",
+      "highlights": ["React", "JavaScript", "DeepL API", "Bootstrap"],
+      "url": "https://traductor-ten.vercel.app/",
+      "github": "https://github.com/titicuevas/traductor"
+    },
+    {
+      "name": "Aplicación Pomodoro",
+      "description": "Aplicación de gestión de tiempo basada en el método Pomodoro para optimizar la productividad, construida en React con diseño responsivo.",
+      "highlights": ["React", "JavaScript", "Bootstrap", "Jest"],
+      "url": "https://pomodorotime-two.vercel.app/",
+      "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/pomodoro-time"
+    },
+    
+    {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
-      "highlights": ["Astro","Typescript","CSS","Ninja Key"],
+      "highlights": ["Astro", "Typescript", "CSS", "Ninja Key"],
       "url": "",
       "github": "https://github.com/titicuevas/porfolio_minimalista"
     }

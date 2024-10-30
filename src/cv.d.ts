@@ -44,7 +44,7 @@ interface Work {
   position: string
   url: string
   startDate: DateStr
-  endDate: DateStr | null
+  endDate: DateStr | "Actualmente"
   summary: string
   highlights: Highlight
 }
