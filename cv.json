@@ -32,7 +32,7 @@
       "name": "Squirrel Media",
       "position": "Desarrollador Web",
       "startDate": "2024-09",
-      "endDate": "Actualmente",
+      "endDate": "2024-11",
       "summary": "Desarrollo de proyectos audiovisuales de series, películas y canales de televisión mediante el uso de HTML, CSS y JavaScript. Creación de interfaces de usuario optimizadas para mejorar la experiencia visual y la usabilidad en múltiples plataformas. Implementación de soluciones tecnológicas innovadoras para maximizar el rendimiento y la accesibilidad de los productos.",
       "highlights": [
         "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
@@ -248,11 +248,21 @@
     },
     
     {
+      "name": "One Piece App",
+      "description": "Aplicación para visualización de contenido de One Piece, consumiendo una API externa.",
+      "highlights": ["React", "JavaScript", "Bootstrap", "API"],
+      "url": "https://onepiece-efhvht70c-henrys-projects-ca9387f6.vercel.app/",
+      "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/onepiece-app"
+    },
+    {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
       "highlights": ["Astro", "Typescript", "CSS", "Ninja Key"],
       "url": "",
       "github": "https://github.com/titicuevas/porfolio_minimalista"
     }
+    
+    
+
   ]
 }
