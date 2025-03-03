@@ -9,8 +9,8 @@
     "summary": "¡Hola! Soy un apasionado de la tecnología y un maestro de las aplicaciones web. 🌟 Entre mis superpoderes están la colaboración y un enfoque proactivo que no se rinde ante nada. 🚀 Aunque mi libro de carrera tenga pocas lineas, estoy seguro de que con mi actitud férrea y mi arduo trabajo, no habrá obstáculo que se interponga en mi camino, ni desafío que me impida convertirme en un superhéroe para tu empresa🦸‍♂️.Siempre estoy aprendiendo, continuamente aprendiendo nuevos lenguajes de programación y usándolos en proyectos interesantes para asegurarme de que mi portafolio esté más brillante que nunca. 🌐 ¡Y espero que haya muchos más desafíos por venir! 🎯",
     "location": {
       "address": "",
-      "postalCode": "11540",
-      "city": "Sanlucar de Barrameda",
+      "postalCode": "08030",
+      "city": "Barcelona",
       "countryCode": "ES",
       "region": "España"
     },
@@ -28,11 +28,23 @@
     ]
   },
   "work": [
+
+    {
+      "name": "NTTDATA",
+      "position": "Desarrollador Web",
+      "startDate": "2025-01",
+      "endDate": "2025-03",
+      "summary": "La migración de aplicaciones desarrolladas en PHP Vanilla (PHP puro, sin frameworks) al framework Laravel es un proceso clave para mejorar la estructura, mantenibilidad y escalabilidad del código. En NTT Data, este tipo de proyecto implica diversas fases y tecnologías, desde el análisis del código heredado hasta la implementación de las mejores prácticas de Laravel.",
+      "highlights": [
+        "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
+      ],
+      "url": "https://es.nttdata.com/"
+    },
     {
       "name": "Squirrel Media",
       "position": "Desarrollador Web",
       "startDate": "2024-09",
-      "endDate": "2024-11",
+      "endDate": "2025-01",
       "summary": "Desarrollo de proyectos audiovisuales de series, películas y canales de televisión mediante el uso de HTML, CSS y JavaScript. Creación de interfaces de usuario optimizadas para mejorar la experiencia visual y la usabilidad en múltiples plataformas. Implementación de soluciones tecnológicas innovadoras para maximizar el rendimiento y la accesibilidad de los productos.",
       "highlights": [
         "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
@@ -246,14 +258,15 @@
       "url": "https://pomodorotime-two.vercel.app/",
       "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/pomodoro-time"
     },
-    
+
     {
-      "name": "One Piece App",
-      "description": "Aplicación para visualización de contenido de One Piece, consumiendo una API externa.",
-      "highlights": ["React", "JavaScript", "Bootstrap", "API"],
-      "url": "https://onepiece-efhvht70c-henrys-projects-ca9387f6.vercel.app/",
-      "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/onepiece-app"
+      "name": "Onepiece App",
+      "description": "Aplicacion para consultar informacio sobre One piece  ",
+      "highlights": ["React", "JavaScript", "Bootstrap"],
+      "url": "https://onepiece-app.vercel.app/",
+      "github": "https://github.com/titicuevas/onepiece-app"
     },
+    
     {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
@@ -261,8 +274,5 @@
       "url": "",
       "github": "https://github.com/titicuevas/porfolio_minimalista"
     }
-    
-    
-
   ]
 }
