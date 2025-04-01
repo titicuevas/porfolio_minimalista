@@ -261,10 +261,17 @@
 
     {
       "name": "Onepiece App",
-      "description": "Aplicacion para consultar informacio sobre One piece  ",
+      "description": "Aplicacion para consultar informacio sobre One piece",
       "highlights": ["React", "JavaScript", "Bootstrap"],
       "url": "https://onepiece-app.vercel.app/",
       "github": "https://github.com/titicuevas/onepiece-app"
+    },
+    {
+      "name": "FitPlanner",
+      "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.",
+      "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","Sqlite"],
+      "url": "",
+      "github": "https://github.com/titicuevas/fitplanner"
     },
     
     {
