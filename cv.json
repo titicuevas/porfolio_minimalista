@@ -269,8 +269,8 @@
     {
       "name": "FitPlanner",
       "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.",
-      "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","Sqlite"],
-      "url": "",
+      "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","PostgreSQL"],
+      "url": "https://fitplanner.up.railway.app",
       "github": "https://github.com/titicuevas/fitplanner"
     },
     
