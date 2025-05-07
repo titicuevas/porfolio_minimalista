@@ -28,7 +28,17 @@
     ]
   },
   "work": [
-
+    {
+      "name": "Desarrollador Web Autónomo",
+      "position": "Desarrollador Web Full Stack",
+      "startDate": "2024-02",
+      "endDate": "Actualmente",
+      "summary": "Desarrollo de proyectos web personalizados utilizando tecnologías modernas como React, Laravel, y servicios en la nube , con enfoque de mejorar cada dia como desarrollador.",
+      "highlights": [
+        "Desarrollo de aplicaciones web full-stack",
+        "Mejorando cada dia como desarrollador"
+      ]
+    },
     {
       "name": "NTTDATA",
       "position": "Desarrollador Web",
@@ -273,6 +283,14 @@
       "url": "https://fitplanner.up.railway.app",
       "github": "https://github.com/titicuevas/fitplanner"
     },
+
+    {
+      "name": "Easeout",
+      "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.",
+      "highlights": ["Laravel","PHP","React", "JavaScript", "Tailwind CSS","PostgreSQL", "Amazon S3"],
+      "url": "https://easeout-production.up.railway.app/",
+      "github": "https://github.com/titicuevas/easeout"
+    },
     
     {
       "name": "Porfolio Minimalista",
@@ -281,5 +299,6 @@
       "url": "",
       "github": "https://github.com/titicuevas/porfolio_minimalista"
     }
+    
   ]
 }
