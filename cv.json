@@ -202,6 +202,10 @@
     {
       "language": "English",
       "fluency": "Advanced"
+    },
+    {
+      "language": "Catalan",
+      "fluency": "Basic"
     }
   ],
   "projects": [
@@ -221,6 +225,31 @@
       "url": "https://github.com/titicuevas/SportBuddy",
       "github": "https://github.com/titicuevas/SportBuddy"
     },
+
+    {
+      "name": "FitPlanner",
+      "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.",
+      "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","PostgreSQL"],
+      "url": "https://fitplanner.up.railway.app",
+      "github": "https://github.com/titicuevas/fitplanner"
+    },
+
+    {
+      "name": "Easeout",
+      "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.",
+      "highlights": ["Laravel","PHP","React", "JavaScript", "Tailwind CSS","PostgreSQL", "Amazon S3"],
+      "url": "https://easeout-production.up.railway.app/",
+      "github": "https://github.com/titicuevas/easeout"
+    },
+
+    {
+      "name": "GGFit",
+      "description": "Aplicación web que gamifica el fitness utilizando datos de League of Legends. Analiza el rendimiento en partidas y asigna ejercicios personalizados para mejorar la salud mientras juegas.",
+      "highlights": ["React", "TypeScript", "Chakra UI", "Supabase", "Riot Games API", "Fitness Gamification"],
+      "url": "https://ggfit-six.vercel.app",
+      "github": "https://github.com/titicuevas/ggfit"
+    },
+
     {
       "name": "Tic-Tac-Toe",
       "isActive": true,
@@ -230,14 +259,7 @@
 
       "github": "https://github.com/titicuevas/Curso_React/tree/main/project/02-tic-tac-toe"
     },
-    {
-      "name": "Mouse Follow Effect",
-      "isActive": true,
-      "description": "Efecto de seguimiento del raton al pulsar un boton",
-      "highlights": ["React", "JavaScript", "CSS"],
-      "url": "https://665615116384e1682092772e--velvety-stardust-5ddb6f.netlify.app/",
-      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower"
-    },
+    
     {
       "name": "Buscador de Peliculas",
       "isActive": true,
@@ -277,21 +299,13 @@
       "github": "https://github.com/titicuevas/onepiece-app"
     },
     {
-      "name": "FitPlanner",
-      "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.",
-      "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","PostgreSQL"],
-      "url": "https://fitplanner.up.railway.app",
-      "github": "https://github.com/titicuevas/fitplanner"
+      "name": "Mouse Follow Effect",
+      "isActive": true,
+      "description": "Efecto de seguimiento del raton al pulsar un boton",
+      "highlights": ["React", "JavaScript", "CSS"],
+      "url": "https://665615116384e1682092772e--velvety-stardust-5ddb6f.netlify.app/",
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower"
     },
-
-    {
-      "name": "Easeout",
-      "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.",
-      "highlights": ["Laravel","PHP","React", "JavaScript", "Tailwind CSS","PostgreSQL", "Amazon S3"],
-      "url": "https://easeout-production.up.railway.app/",
-      "github": "https://github.com/titicuevas/easeout"
-    },
-    
     {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
