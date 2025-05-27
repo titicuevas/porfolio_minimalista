@@ -243,6 +243,14 @@
     },
 
     {
+      "name": "Planeat",
+      "description": "Aplicación web de planificación de comidas que utiliza IA (Gemini) para generar menús personalizados y recetas, con listas de compra automáticas y diseño responsive.",
+      "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Gemini AI", "Vitest", "Testing Library"],
+      "url": "https://planeat.vercel.app",
+      "github": "https://github.com/titicuevas/planeat"
+    },
+
+    {
       "name": "GGFit",
       "description": "Aplicación web que gamifica el fitness utilizando datos de League of Legends. Analiza el rendimiento en partidas y asigna ejercicios personalizados para mejorar la salud mientras juegas.",
       "highlights": ["React", "TypeScript", "Chakra UI", "Supabase", "Riot Games API", "Fitness Gamification"],
@@ -312,7 +320,13 @@
       "highlights": ["Astro", "Typescript", "CSS", "Ninja Key"],
       "url": "",
       "github": "https://github.com/titicuevas/porfolio_minimalista"
+    },
+    {
+      "name": "Planeat",
+      "description": "Aplicación web para planificación de comidas que genera menús semanales personalizados y listas de compra automáticas, con modo oscuro y diseño responsive.",
+      "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Vitest", "Testing Library", "SweetAlert2"],
+      "url": "https://planeat.vercel.app",
+      "github": "https://github.com/titicuevas/planeat"
     }
-    
   ]
 }
