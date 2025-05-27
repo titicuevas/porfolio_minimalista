@@ -246,7 +246,7 @@
       "name": "Planeat",
       "description": "Aplicación web de planificación de comidas que utiliza IA (Gemini) para generar menús personalizados y recetas, con listas de compra automáticas y diseño responsive.",
       "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Gemini AI", "Vitest", "Testing Library"],
-      "url": "https://planeat.vercel.app",
+      "url": "https://planeat.up.railway.app/",
       "github": "https://github.com/titicuevas/planeat"
     },
 
