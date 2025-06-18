@@ -16,9 +16,11 @@ import Docker from "@/icons/docker.astro"
 import WordPress from "@/icons/wordpress.astro"
 import SourceTree from "@/icons/sourcetree.astro"
 import Bootstrap from "@/icons/bootstrap.astro"
+import Supabase from "@/icons/supabase.astro"
+import Kanban from "@/icons/kanban.astro"
 import { skills } from "@cv"
 
-const SKILLS_ICONS: Record<string, any> = {
+const SKILLS_ICONS = {
   HTML,
   CSS,
   JavaScript,
@@ -35,45 +37,107 @@ const SKILLS_ICONS: Record<string, any> = {
   WordPress,
   SourceTree,
   Bootstrap,
+  Supabase,
+  Kanban,
 }
 
+const frontend = [
+  "HTML", "CSS", "Bootstrap", "Tailwind", "JavaScript", "React"
+]
+const backend = [
+  "PHP", "Laravel", "Python", "PostgreSQL", "MySQL", "Docker", "Supabase"
+]
+const otras = [
+  "WordPress", "SourceTree", "Git", "GitHub", "Scrum", "Kanban"
+]
 
+const getSkills = (names: string[]): typeof skills => skills.filter((s: { name: string }) => names.includes(s.name))
 
 ---
-
 <Section title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
-
+  <div class="skills-group">
+    <h3>Frontend</h3>
+    <ul class="skills-chips-row">
+      {getSkills(frontend).map(({ name }) => {
+        const Icon = SKILLS_ICONS[name as keyof typeof SKILLS_ICONS]
         return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
+          <li class="skill-chip">{Icon && <Icon />}<span>{name}</span></li>
         )
-      })
-    }
-  </ul>
+      })}
+    </ul>
+  </div>
+  <div class="skills-group">
+    <h3>Backend</h3>
+    <ul class="skills-chips-row">
+      {getSkills(backend).map(({ name }) => {
+        const Icon = SKILLS_ICONS[name as keyof typeof SKILLS_ICONS]
+        return (
+          <li class="skill-chip">{Icon && <Icon />}<span>{name}</span></li>
+        )
+      })}
+    </ul>
+  </div>
+  <div class="skills-group">
+    <h3>Otras</h3>
+    <ul class="skills-chips-row">
+      {getSkills(otras).map(({ name }) => {
+        const Icon = SKILLS_ICONS[name as keyof typeof SKILLS_ICONS]
+        return (
+          <li class="skill-chip">{Icon && <Icon />}<span>{name}</span></li>
+        )
+      })}
+    </ul>
+  </div>
 </Section>
 
 <style>
-  ul {
-    display: inline-flex;
-    gap: 8px;
-    flex-wrap: wrap;
+  :root {
+    --color-primary: #2563eb;
+    --color-accent: #38bdf8;
+    --color-bg: #f3f4f6;
+    --color-bg-hover: #e0e7ef;
+    --color-text: #222;
+    --color-white: #fff;
   }
-
-  li {
-    align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    color: black;
+  .skills-group {
+    margin-bottom: 18px;
+  }
+  .skills-group h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--color-primary);
+    letter-spacing: 0.01em;
+  }
+  .skills-chips-row {
     display: flex;
-    font-size: 0.8rem;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+  .skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg);
+    border-radius: 999px;
+    padding: 12px 26px;
+    font-size: 1.12em;
     font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
+    color: var(--color-text);
+    box-shadow: 0 2px 8px #2563eb22;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .skill-chip svg {
+    width: 38px;
+    height: 38px;
+  }
+  .skill-chip:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-4px) scale(1.12);
+    box-shadow: 0 6px 24px #2563eb33;
   }
 </style>

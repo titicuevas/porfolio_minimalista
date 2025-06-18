@@ -1,13 +1,60 @@
 ---
 import Section from "../Section.astro";
 import { work } from "@cv";
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import React from "@/icons/react.astro";
+import MySQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import TailwindCSS from "@/icons/tailwindcss.astro";
+import PHP from "@/icons/php.astro";
+import Laravel from "@/icons/laravel.astro";
+import Python from "@/icons/python.astro";
+import PostgreSQL from "@/icons/postgresql.astro";
+import Docker from "@/icons/docker.astro";
+import WordPress from "@/icons/wordpress.astro";
+import SourceTree from "@/icons/sourcetree.astro";
+import Bootstrap from "@/icons/bootstrap.astro";
+import Supabase from "@/icons/supabase.astro";
+import PayPal from "@/icons/paypal.astro";
+
+const SKILLS_ICONS = {
+  HTML,
+  CSS,
+  JavaScript,
+  React,
+  MySQL,
+  Git,
+  GitHub,
+  Tailwind,
+  TailwindCSS,
+  "Tailwind CSS": TailwindCSS,
+  PHP,
+  Laravel,
+  Python,
+  PostgreSQL,
+  Docker,
+  WordPress,
+  SourceTree,
+  Bootstrap,
+  "Node.js": Git, // Puedes cambiarlo por un icono de Node si lo tienes
+  Supabase,
+  "Alpine.js": JavaScript,
+  PayPal: PayPal
+};
+function getIcon(tech: string) {
+  return tech in SKILLS_ICONS ? SKILLS_ICONS[tech as keyof typeof SKILLS_ICONS] : null;
+}
 ---
 
 <Section title="Experiencia laboral">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ name, startDate, endDate, position, summary, highlights, url, stack = [] }) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate && endDate !== "Actualmente"
@@ -29,6 +76,19 @@ import { work } from "@cv";
                       )}
                     </h3>
                     <h4>{position}</h4>
+                    {stack.length > 0 && (
+                      <div class="stack-chips-row">
+                        {stack.map((tech: string) => {
+                          const Icon = getIcon(tech);
+                          return (
+                            <span class="stack-chip" title={tech}>
+                              {Icon && <Icon />}
+                              <span>{tech}</span>
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
 
                   <div>
@@ -55,61 +115,110 @@ import { work } from "@cv";
 </Section>
 
 <style>
+  :root {
+    --color-primary: #2563eb;
+    --color-accent: #38bdf8;
+    --color-bg: #f3f4f6;
+    --color-bg-hover: #e0e7ef;
+    --color-text: #222;
+    --color-white: #fff;
+  }
   ul {
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
-
+  article {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #2563eb11;
+    background: var(--color-bg);
+    padding: 22px 32px;
+    transition: box-shadow 0.25s, transform 0.22s;
+    border: 1.5px solid #e0e7ef;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  article:hover {
+    box-shadow: 0 12px 36px #2563eb33;
+    transform: translateY(-6px) scale(1.025);
+    border: 1.5px solid var(--color-accent);
+  }
   article h3 {
-    font-weight: 500;
-    color: #111;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 1.18rem;
+    margin-bottom: 2px;
   }
-
   article a {
-    color: #111;
+    color: var(--color-primary);
+    transition: color 0.2s;
+    text-decoration: none;
   }
-
   article a:hover {
     text-decoration: underline;
+    color: var(--color-accent);
   }
-
   article h4 {
     color: #222;
     font-weight: 400;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
   }
-
+  .stack-chips-row {
+    display: flex;
+    gap: 16px;
+    margin: 18px 0 18px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .stack-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-hover);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 1.08em;
+    font-weight: 500;
+    color: var(--color-text);
+    box-shadow: 0 2px 8px #2563eb11;
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .stack-chip svg {
+    width: 34px;
+    height: 34px;
+  }
+  .stack-chip:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px) scale(1.10);
+    box-shadow: 0 6px 24px #2563eb33;
+  }
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 4px;
   }
-
   time {
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
     cursor: default;
   }
-
   [data-title]:hover:after {
     opacity: 1;
     transition: all 0.1s ease-in-out 0.5s;
     visibility: visible;
   }
-
   [data-title]:after {
     content: attr(data-title);
     background-color: #333;
     color: #fff;
     font-size: 0.75rem;
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      monospace;
+    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;
     position: absolute;
     padding: 0.2rem 0.5rem;
     bottom: -1.4rem;
@@ -122,14 +231,18 @@ import { work } from "@cv";
     visibility: hidden;
     border-radius: 6px;
   }
-
   [data-title] {
     position: relative;
   }
-
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+    .stack-chips-row {
+      justify-content: center;
+    }
+    article {
+      padding: 14px 6px;
     }
   }
 </style>

@@ -9,33 +9,59 @@ import { projects } from "@cv"
   <ul>
     {
       projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
+        ({ url, description, highlights, name, isActive, github, image, stack }) => {
+          // Detectar si hay usuario demo en la descripción
+          let testUser = null;
+          let desc = description;
+          const userMatch = description.match(/Usuario de prueba: (.+)\nContraseña: (.+)/) || description.match(/Usuario: (.+)\nContraseña: (.+)/);
+          if (userMatch) {
+            testUser = {
+              user: userMatch[1].trim(),
+              pass: userMatch[2].trim()
+            };
+            desc = description.replace(/\n?Usuario( de prueba)?: .+\nContraseña: .+/, "");
+          }
           return (
-            <li>
+            <li class="project-card">
               <article>
+                <div class="project-image">
+                  {image ? (
+                    <img src={image} alt={`Logo de ${name}`} />
+                  ) : (
+                    <div class="project-placeholder">🚀</div>
+                  )}
+                </div>
                 <header>
-                  <h3>
-                    <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>
-                      {name}
-                    </a>
-                    {isActive && <span>•</span>}
-                    {github && (
-                      <a
-                        class="github-code-link"
-                        href={github}
-                        target="_blank"
-                        title={`Ver código fuente del proyecto ${name}`}
-                      >
-                        <GitHub />
-                      </a>
-                    )}
+                  <h3 class="project-title">
+                    <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>{name}</a>
+                    {isActive && <span class="project-dot">•</span>}
                   </h3>
-                  <p>{description}</p>
+                  <p class="project-desc">{desc}</p>
+                  {testUser && (
+                    <div class="project-demo-access">
+                      <span class="demo-icon">🔑</span>
+                      <div>
+                        <strong>¿Quieres probar la app?</strong><br/>
+                        Usuario: <b>{testUser.user}</b><br/>
+                        Contraseña: <b>{testUser.pass}</b>
+                      </div>
+                    </div>
+                  )}
                 </header>
-                <footer>
+                <div class="project-badges">
                   {highlights.map((highlight) => {
-                    return <span>{highlight}</span>
+                    return <span class="project-badge">{highlight}</span>
                   })}
+                </div>
+                <footer class="project-actions">
+                  {url && (
+                    <a href={url} target="_blank" class="project-btn">Ver demo</a>
+                  )}
+                  {github && (
+                    <a href={github} target="_blank" class="project-btn code-btn">
+                      <GitHub /> Código
+                    </a>
+                  )}
                 </footer>
               </article>
             </li>
@@ -47,100 +73,175 @@ import { projects } from "@cv"
 </Section>
 
 <style>
+  :root {
+    --color-primary: #2563eb;
+    --color-accent: #38bdf8;
+    --color-bg: #f3f4f6;
+    --color-bg-hover: #e0e7ef;
+    --color-text: #222;
+    --color-white: #fff;
+  }
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
+    margin-inline: 0;
   }
-
-  article {
-    border-radius: 8px;
-    border: 1px solid #f2f2f2;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
+  .project-card {
+    list-style: none;
     height: 100%;
   }
-
-  article header {
-    flex: 1;
+  article {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #2563eb11;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 18px 0;
+    height: 100%;
+    transition: box-shadow 0.25s, transform 0.22s;
+    border: 1.5px solid #e0e7ef;
   }
-
-  article h3 {
-    margin-bottom: 4px;
+  article:hover {
+    box-shadow: 0 12px 36px #2563eb33;
+    transform: translateY(-6px) scale(1.025);
+    border: 1.5px solid var(--color-accent);
   }
-
-  article a {
-    color: #111;
+  .project-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-hover);
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
   }
-
-  article a:hover {
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .project-placeholder {
+    font-size: 2.5rem;
+    color: #bdbdbd;
+  }
+  .project-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin: 16px 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .project-title a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .project-title a:hover {
     text-decoration: underline;
+    color: var(--color-accent);
   }
-
-  article p {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
-    margin-bottom: 4px;
+  .project-dot {
+    color: #00bc2f;
+    font-size: 1.2em;
+    animation: flicker 3s ease-in infinite;
   }
-
-  article h3 span {
-    color: rgb(0, 188, 47);
-    animation-name: flicker;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
+  .project-desc {
+    font-size: 1.01rem;
+    line-height: 1.35rem;
+    margin-bottom: 8px;
+    color: #444;
+    white-space: pre-line;
   }
-
-  footer {
+  .project-demo-access {
+    background: #e0f2fe;
+    border: 1.5px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin: 10px 0 14px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.98em;
+  }
+  .demo-icon {
+    font-size: 1.6em;
+    margin-top: 2px;
+  }
+  .project-demo-access b {
+    color: var(--color-primary);
+    font-family: 'Fira Mono', monospace;
+  }
+  .project-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
+    gap: 8px;
+    margin-bottom: 12px;
   }
-
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
+  .project-badge {
+    border-radius: 999px;
+    background: var(--color-bg-hover);
+    color: var(--color-text);
+    font-size: 0.85rem;
     font-weight: 500;
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 1.1rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px #2563eb11;
+    transition: background 0.2s, color 0.2s;
   }
-
-  .github-code-link {
-    margin-left: 5px;
+  .project-badge:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
   }
-
+  .project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding: 0 16px;
+  }
+  .project-btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 0.45em 1.3em;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 4px #2563eb11;
+  }
+  .project-btn:hover {
+    background: var(--color-accent);
+    transform: scale(1.07);
+  }
+  .code-btn {
+    background: #222;
+  }
+  .code-btn:hover {
+    background: #444;
+  }
   @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.25;
-    }
-    100% {
-      opacity: 1;
-    }
+    0% { opacity: 1; }
+    50% { opacity: 0.25; }
+    100% { opacity: 1; }
   }
-
   @media (width <= 700px) {
     ul {
-      margin-inline: 0px;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
-
-    article {
-      border: none;
-      box-shadow: 0 1px 1px #f2f2f2;
-      padding: 0 0 16px 0;
+    .project-image {
+      height: 80px;
     }
-  }
-
-  @media print {
-    article h3 span {
-      animation-name: none;
+    .project-title {
+      font-size: 1rem;
     }
   }
 </style>

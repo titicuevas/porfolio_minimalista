@@ -7,27 +7,33 @@ import { education } from "@cv"
 <Section title="Educación">
   <ul>
     {
-      education.map(({ institution, startDate, endDate, area }) => {
+      education.map(({ institution, startDate, endDate, area, url }) => {
         const startYear = new Date(startDate).getFullYear()
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Actual"
         const years = `${startYear} - ${endYear}`
 
         return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <h3>{institution}</h3>
-                </div>
-
-                <time>{years}</time>
-              </header>
-
-              <footer>
-                <p>{area}</p>
-              </footer>
-            </article>
+          <li class="edu-card">
+            <div class="edu-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 8.5L12 14L22 8.5L12 3Z" fill="#0070f3"/>
+                <path d="M2 17.5V9.5L12 15.5L22 9.5V17.5C22 18.3284 21.3284 19 20.5 19H3.5C2.67157 19 2 18.3284 2 17.5Z" fill="#e0e7ef"/>
+              </svg>
+            </div>
+            <div class="edu-info">
+              <div class="edu-header">
+                <h3>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noopener noreferrer">{institution}</a>
+                  ) : (
+                    institution
+                  )}
+                </h3>
+                <span class="edu-years">{years}</span>
+              </div>
+              <div class="edu-area">{area}</div>
+            </div>
           </li>
         )
       })
@@ -36,33 +42,95 @@ import { education } from "@cv"
 </Section>
 
 <style>
+  :root {
+    --color-primary: #2563eb;
+    --color-accent: #38bdf8;
+    --color-bg: #f3f4f6;
+    --color-bg-hover: #e0e7ef;
+    --color-text: #222;
+    --color-white: #fff;
+  }
   ul {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
   }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  header {
+  .edu-card {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
+    align-items: center;
+    gap: 18px;
+    background: var(--color-bg);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #2563eb11;
+    padding: 22px 32px;
+    min-height: 80px;
+    border: 1.5px solid #e0e7ef;
+    transition: box-shadow 0.25s, transform 0.22s, border 0.2s;
   }
-
-  time {
+  .edu-card:hover {
+    box-shadow: 0 8px 32px #2563eb33;
+    transform: translateY(-4px) scale(1.03);
+    border: 1.5px solid var(--color-accent);
+  }
+  .edu-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-hover);
+    border-radius: 10px;
+    width: 56px;
+    height: 56px;
+  }
+  .edu-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .edu-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-primary);
+  }
+  .edu-info a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .edu-info a:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+  }
+  .edu-years {
     color: #555;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    font-weight: 400;
     min-width: 102px;
+    letter-spacing: 1px;
   }
-
+  .edu-area {
+    color: #444;
+    font-size: 1rem;
+    margin-top: 2px;
+    font-family: 'Fira Mono', 'Menlo', 'Monaco', monospace;
+  }
   @media (width <= 700px) {
-    time {
-      text-align: right;
+    .edu-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 12px;
+    }
+    .edu-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .edu-icon {
+      width: 44px;
+      height: 44px;
     }
   }
 </style>

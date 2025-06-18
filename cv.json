@@ -33,52 +33,69 @@
       "position": "Desarrollador Web Full Stack",
       "startDate": "2024-02",
       "endDate": "Actualmente",
-      "summary": "Desarrollo de proyectos web personalizados utilizando tecnologías modernas como React, Laravel, y servicios en la nube , con enfoque de mejorar cada dia como desarrollador.",
+      "summary": "Desarrollo de aplicaciones web a medida para clientes de diversos sectores, gestionando todo el ciclo de vida del proyecto: desde la toma de requisitos hasta el despliegue y mantenimiento. Implementación de soluciones modernas con React, Node.js, Laravel, Tailwind CSS y Supabase, priorizando la escalabilidad, la experiencia de usuario y la calidad del código.",
       "highlights": [
-        "Desarrollo de aplicaciones web full-stack",
-        "Mejorando cada dia como desarrollador"
-      ]
+        "Gestión integral de proyectos web full-stack.",
+        "Optimización de rendimiento y accesibilidad.",
+        "Comunicación directa con clientes y adaptación a sus necesidades."
+      ],
+      "stack": ["React", "Node.js", "Laravel", "Tailwind CSS", "Supabase"]
     },
     {
       "name": "NTTDATA",
       "position": "Desarrollador Web",
       "startDate": "2025-01",
       "endDate": "2025-03",
-      "summary": "La migración de aplicaciones desarrolladas en PHP Vanilla (PHP puro, sin frameworks) al framework Laravel es un proceso clave para mejorar la estructura, mantenibilidad y escalabilidad del código. En NTT Data, este tipo de proyecto implica diversas fases y tecnologías, desde el análisis del código heredado hasta la implementación de las mejores prácticas de Laravel.",
+      "summary": "Migración y modernización de aplicaciones legacy en PHP Vanilla a Laravel, mejorando la estructura, mantenibilidad y escalabilidad del código. Colaboración con equipos multidisciplinares para implementar buenas prácticas, automatizar procesos y asegurar la calidad en entornos empresariales.",
       "highlights": [
-        "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
+        "Refactorización y migración de código legacy.",
+        "Implementación de buenas prácticas y automatización.",
+        "Trabajo en equipo con diseñadores y product managers."
       ],
-      "url": "https://es.nttdata.com/"
+      "url": "https://es.nttdata.com/",
+      "stack": ["PHP", "Laravel"]
     },
     {
       "name": "Squirrel Media",
       "position": "Desarrollador Web",
       "startDate": "2024-09",
       "endDate": "2025-01",
-      "summary": "Desarrollo de proyectos audiovisuales de series, películas y canales de televisión mediante el uso de HTML, CSS y JavaScript. Creación de interfaces de usuario optimizadas para mejorar la experiencia visual y la usabilidad en múltiples plataformas. Implementación de soluciones tecnológicas innovadoras para maximizar el rendimiento y la accesibilidad de los productos.",
+      "summary": "Desarrollo de interfaces web para proyectos audiovisuales (series, películas, TV) utilizando HTML, CSS y JavaScript. Creación de experiencias visuales atractivas y accesibles, optimizando la usabilidad en múltiples plataformas y dispositivos.",
       "highlights": [
-        "Colaboración constante con equipos de diseño y producción para asegurar la coherencia y calidad de los proyectos"
+        "Diseño y desarrollo de interfaces responsive.",
+        "Optimización de experiencia de usuario.",
+        "Colaboración con equipos creativos y técnicos."
       ],
-      "url": "https://squirrelmedia.es/"
+      "url": "https://squirrelmedia.es/",
+      "stack": ["HTML", "CSS", "JavaScript"]
     },
-
     {
       "name": "Ayuntamiento de Sanlucar de Barrameda",
       "position": "Web developer",
       "startDate": "2023-09-10",
       "endDate": "2024-02-10",
-      "summary": "He creado una API en PHP para el departamento de Control de Calidad de los Animales que puede interactuar con una base de datos MySQL. También he agregado la capacidad de ver y actualizar datos en WordPress para proporcionar accesibilidad y usabilidad. También he creado soluciones de tecnología que se integran por completo.",
-      "highlights": ["Started the company"],
-      "url": "https://www.sanlucardebarrameda.es/"
+      "summary": "Creación de una API en PHP para el departamento de Control de Calidad Animal, integrando bases de datos MySQL y WordPress para la gestión y visualización de datos. Desarrollo de soluciones tecnológicas que mejoran la accesibilidad y la eficiencia de los procesos internos.",
+      "highlights": [
+        "Desarrollo de API RESTful en PHP.",
+        "Integración con WordPress y MySQL.",
+        "Mejora de procesos internos y accesibilidad."
+      ],
+      "url": "https://www.sanlucardebarrameda.es/",
+      "stack": ["PHP", "MySQL", "WordPress"]
     },
     {
       "name": "Sportbuddy",
       "position": "Web developer",
       "startDate": "2023-09-10",
       "endDate": "2024-02-13",
-      "summary": "Desarrollé una aplicación destinada a la coordinación de eventos deportivos. En el back-end, trabajé con PHP y el framework Laravel usando su inyección de dependencias, ORM y muchas otras instalaciones útiles que proporciona este framework. En el front-end, utilicé Alpine.js para la interactividad y Tailwind CSS para el diseño para hacer una interfaz elegante y fácil de usar. Incluí una pasarela de pago a través de PayPal. En la gestión de datos, use PostgreSQL, lo que ayudó a hacer el sistema más sólido y escalable. Estas habilidades se refinaron en la gestión de productos que son totalmente integrados desde la fuente hasta el consumidor.",
-      "highlights": ["Started the company"],
-      "url": "https://github.com/titicuevas/SportBuddy"
+      "summary": "Desarrollo de una plataforma web para la gestión de eventos deportivos, con backend en Laravel y frontend interactivo con Alpine.js y Tailwind CSS. Integración de pasarela de pago PayPal y gestión avanzada de datos con PostgreSQL, asegurando una experiencia robusta y escalable.",
+      "highlights": [
+        "Desarrollo full-stack de plataforma de eventos.",
+        "Integración de pagos y gestión de usuarios.",
+        "Diseño de interfaz moderna y escalable."
+      ],
+      "url": "https://github.com/titicuevas/SportBuddy",
+      "stack": ["PHP", "Laravel", "Alpine.js", "Tailwind CSS", "PostgreSQL", "PayPal"]
     }
   ],
 
@@ -192,6 +209,18 @@
         "Código Fuente",
         "Git"
       ]
+    },
+    {
+      "name": "Supabase",
+      "keywords": ["Backend", "BaaS", "Realtime", "PostgreSQL"]
+    },
+    {
+      "name": "Scrum",
+      "keywords": ["Metodología ágil", "Gestión de proyectos", "Trabajo en equipo"]
+    },
+    {
+      "name": "Kanban",
+      "keywords": ["Metodología ágil", "Gestión visual", "Productividad"]
     }
   ],
   "languages": [
@@ -223,31 +252,38 @@
         "PayPal"
       ],
       "url": "https://github.com/titicuevas/SportBuddy",
-      "github": "https://github.com/titicuevas/SportBuddy"
+      "github": "https://github.com/titicuevas/SportBuddy",
+      "stack": ["PHP", "Laravel", "Alpine.js", "Tailwind CSS", "PostgreSQL", "PayPal"]
     },
 
     {
       "name": "FitPlanner",
-      "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.",
+      "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.\n\nUsuario de prueba: prueba@prueba.com\nContraseña: 12345678",
       "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","PostgreSQL"],
       "url": "https://fitplanner.up.railway.app",
-      "github": "https://github.com/titicuevas/fitplanner"
+      "github": "https://github.com/titicuevas/fitplanner",
+      "stack": ["Laravel", "PHP", "React", "JavaScript", "Bootstrap", "PostgreSQL"],
+      "image": "/Fitplanner.png"
     },
 
     {
       "name": "Easeout",
-      "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.",
+      "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.\n\nUsuario de prueba: prueba@prueba.com\nContraseña: 12345678",
       "highlights": ["Laravel","PHP","React", "JavaScript", "Tailwind CSS","PostgreSQL", "Amazon S3"],
       "url": "https://easeout-production.up.railway.app/",
-      "github": "https://github.com/titicuevas/easeout"
+      "github": "https://github.com/titicuevas/easeout",
+      "stack": ["Laravel", "PHP", "React", "JavaScript", "Tailwind CSS", "PostgreSQL", "Amazon S3"],
+      "image": "/Easeout.png"
     },
 
     {
       "name": "Planeat",
-      "description": "Aplicación web de planificación de comidas que utiliza IA (Gemini) para generar menús personalizados y recetas, con listas de compra automáticas y diseño responsive.",
+      "description": "Aplicación web de planificación de comidas que utiliza IA (Gemini) para generar menús personalizados y recetas, con listas de compra automáticas y diseño responsive.\n\nUsuario de prueba: demo@planeat.com\nContraseña: 12345678",
       "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Gemini AI", "Vitest", "Testing Library"],
       "url": "https://planeat.up.railway.app/",
-      "github": "https://github.com/titicuevas/planeat"
+      "github": "https://github.com/titicuevas/planeat",
+      "stack": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Gemini AI", "Vitest", "Testing Library"],
+      "image": "/Planeat.png"
     },
 
     {
@@ -255,7 +291,9 @@
       "description": "Aplicación web que gamifica el fitness utilizando datos de League of Legends. Analiza el rendimiento en partidas y asigna ejercicios personalizados para mejorar la salud mientras juegas.",
       "highlights": ["React", "TypeScript", "Chakra UI", "Supabase", "Riot Games API", "Fitness Gamification"],
       "url": "https://ggfit-six.vercel.app",
-      "github": "https://github.com/titicuevas/ggfit"
+      "github": "https://github.com/titicuevas/ggfit",
+      "stack": ["React", "TypeScript", "Chakra UI", "Supabase", "Riot Games API", "Fitness Gamification"],
+      "image": "/GGFit.png"
     },
 
     {
@@ -264,8 +302,9 @@
       "description": "Juego de tres en raya usando React-Vite JavaScript",
       "highlights": ["Juego", "2 jugadores", "React", "JavaScript"],
       "url": "https://6656145a6384e16642927762--superlative-sherbet-07343b.netlify.app/",
-
-      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/02-tic-tac-toe"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/02-tic-tac-toe",
+      "stack": ["React", "JavaScript"],
+      "image": "/TikTakToe.png"
     },
     
     {
@@ -274,7 +313,9 @@
       "description": "Buscador de peliculas, consumiendo una API y traduccion de la descripcion de las peliculas",
       "highlights": ["React", "JavaScript", "API"],
       "url": "https://comfy-lolly-03f554.netlify.app/",
-      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/05-react-buscador-peliculas"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/05-react-buscador-peliculas",
+      "stack": ["React", "JavaScript", "API"],
+      "image": "/BuscadorPeliculas.png"
     },
     {
       "name": "Carrito de la compra",
@@ -282,21 +323,27 @@
       "description": "Carro de la compra , para diferentes articulos, con filtros",
       "highlights": ["React", "JavaScript"],
       "url": "https://chimerical-sherbet-7cc80b.netlify.app/",
-      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/06-Spopping-Cart"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/06-Spopping-Cart",
+      "stack": ["React", "JavaScript"],
+      "image": "/CarritoCompra.png"
     },
     {
       "name": "Traductor de Idiomas",
       "description": "Traductor de idiomas utilizando la API de DeepL para ofrecer traducciones precisas y rápidas, con diseño responsivo en React y JavaScript.",
       "highlights": ["React", "JavaScript", "DeepL API", "Bootstrap"],
       "url": "https://traductor-ten.vercel.app/",
-      "github": "https://github.com/titicuevas/traductor"
+      "github": "https://github.com/titicuevas/traductor",
+      "stack": ["React", "JavaScript", "DeepL API", "Bootstrap"],
+      "image": "/Traductor.png"
     },
     {
       "name": "Aplicación Pomodoro",
       "description": "Aplicación de gestión de tiempo basada en el método Pomodoro para optimizar la productividad, construida en React con diseño responsivo.",
       "highlights": ["React", "JavaScript", "Bootstrap", "Jest"],
       "url": "https://pomodorotime-two.vercel.app/",
-      "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/pomodoro-time"
+      "github": "https://github.com/titicuevas/Proyectos_React_2.0/tree/main/pomodoro-time",
+      "stack": ["React", "JavaScript", "Bootstrap", "Jest"],
+      "image": "/Pomodoro.png"
     },
 
     {
@@ -304,7 +351,9 @@
       "description": "Aplicacion para consultar informacio sobre One piece",
       "highlights": ["React", "JavaScript", "Bootstrap"],
       "url": "https://onepiece-app.vercel.app/",
-      "github": "https://github.com/titicuevas/onepiece-app"
+      "github": "https://github.com/titicuevas/onepiece-app",
+      "stack": ["React", "JavaScript", "Bootstrap"],
+      "image": "/OnePiece.png"
     },
     {
       "name": "Mouse Follow Effect",
@@ -312,21 +361,17 @@
       "description": "Efecto de seguimiento del raton al pulsar un boton",
       "highlights": ["React", "JavaScript", "CSS"],
       "url": "https://665615116384e1682092772e--velvety-stardust-5ddb6f.netlify.app/",
-      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower"
+      "github": "https://github.com/titicuevas/Curso_React/tree/main/project/03-mouse-follower",
+      "stack": ["React", "JavaScript", "CSS"]
     },
     {
       "name": "Porfolio Minimalista",
       "description": "Porfolio Minimalista usando el framework Astro , con buscador Ninja Key",
       "highlights": ["Astro", "Typescript", "CSS", "Ninja Key"],
       "url": "",
-      "github": "https://github.com/titicuevas/porfolio_minimalista"
-    },
-    {
-      "name": "Planeat",
-      "description": "Aplicación web para planificación de comidas que genera menús semanales personalizados y listas de compra automáticas, con modo oscuro y diseño responsive.",
-      "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Vitest", "Testing Library", "SweetAlert2"],
-      "url": "https://planeat.vercel.app",
-      "github": "https://github.com/titicuevas/planeat"
+      "github": "https://github.com/titicuevas/porfolio_minimalista",
+      "stack": ["Astro", "Typescript", "CSS", "Ninja Key"]
     }
+    
   ]
 }
