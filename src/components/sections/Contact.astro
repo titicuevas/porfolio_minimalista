@@ -1,0 +1,125 @@
+---
+import Section from "../Section.astro"
+import Mail from "@/icons/Mail.astro"
+import LinkedIn from "@/icons/LinkedIn.astro"
+import GitHub from "@/icons/GitHub.astro"
+
+const email = "enriquecuegarcia@gmail.com"
+const linkedIn = "https://www.linkedin.com/in/tu-linkedin" // Cambia por tu URL
+const github = "https://github.com/tu-github" // Cambia por tu URL
+---
+<Section title="Contacto">
+  <div class="contact-container">
+    <p>¿Interesado en mi perfil? No dudes en contactarme.</p>
+    <div class="actions-container">
+      <button id="copy-btn" class="action-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+        <span>Copiar correo</span>
+      </button>
+      <a href={`mailto:${email}`} class="action-btn">
+        <Mail />
+        <span>Enviar email</span>
+      </a>
+    </div>
+    <div class="contact-social">
+      <a href={linkedIn} target="_blank" title="LinkedIn"><LinkedIn /></a>
+      <a href={github} target="_blank" title="GitHub"><GitHub /></a>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .contact-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .contact-container p {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    max-width: 450px;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    background: var(--card-bg-color);
+    color: var(--heading-color);
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--card-border-color);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .action-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+  .action-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  
+  .contact-social a {
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--card-border-color);
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-social a:hover {
+    background: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+  }
+</style>
+
+<script>
+  const copyBtn = document.getElementById("copy-btn") as HTMLButtonElement | null
+  const emailToCopy = "enriquecuegarcia@gmail.com"
+
+  if (copyBtn) {
+    const btnSpan = copyBtn.querySelector('span');
+    
+    if (btnSpan) {
+      const originalText = btnSpan.innerText;
+
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(emailToCopy).then(() => {
+          btnSpan.innerText = "¡Copiado!";
+          copyBtn.disabled = true;
+          setTimeout(() => {
+            if(btnSpan) btnSpan.innerText = originalText;
+            copyBtn.disabled = false;
+          }, 2000);
+        });
+      });
+    }
+  }
+</script> 

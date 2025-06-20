@@ -8,6 +8,7 @@ import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
+import Contact from "@/components/sections/Contact.astro"
 
 import { basics } from "@cv"
 const { name, label } = basics
@@ -15,12 +16,13 @@ const { name, label } = basics
 
 <Layout title={`Portfolio  de ${name} - ${label}`}>
   <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
+    <Hero class="fade-section" />
+    <About class="fade-section" />
+    <Experience class="fade-section" />
+    <Education class="fade-section" />
+    <Projects class="fade-section" />
+    <Skills class="fade-section" />
+    <Contact class="fade-section" />
   </main>
 
   <KeyboardManager />

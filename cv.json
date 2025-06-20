@@ -205,9 +205,9 @@
 
       "keywords": [
         "Control de Versiones",
+        "Git",
         "Colaboración",
-        "Código Fuente",
-        "Git"
+        "Herramientas de Desarrollo"
       ]
     },
     {
@@ -216,11 +216,23 @@
     },
     {
       "name": "Scrum",
-      "keywords": ["Metodología ágil", "Gestión de proyectos", "Trabajo en equipo"]
+      "keywords": ["Metodologías Ágiles", "Gestión de Proyectos"]
     },
     {
       "name": "Kanban",
-      "keywords": ["Metodología ágil", "Gestión visual", "Productividad"]
+      "keywords": ["Metodologías Ágiles", "Gestión de Proyectos", "Flujo de Trabajo"]
+    },
+    {
+      "name": "Astro",
+      "keywords": ["Desarrollo Web", "Frontend", "Static Site Generator", "Framework"]
+    },
+    {
+      "name": "Postman",
+      "keywords": ["API", "Testing", "Herramientas de Desarrollo", "Backend"]
+    },
+    {
+      "name": "AWS",
+      "keywords": ["Cloud Computing", "DevOps", "Servidores", "Backend"]
     }
   ],
   "languages": [
@@ -240,7 +252,7 @@
   "projects": [
     {
       "name": "Sportbuddy",
-      "isActive": true,
+      "isActive": false,
       "description": "Aplicacion web, para crear eventos deportivos y unirse a ellos.",
       "highlights": [
         "Creador de Eventos deportivos",
@@ -258,6 +270,7 @@
 
     {
       "name": "FitPlanner",
+      "isActive": true,
       "description": "FitPlanner es una aplicación de gestión de entrenamientos que permite a los usuarios registrar y hacer un seguimiento de sus entrenamientos.\n\nUsuario de prueba: prueba@prueba.com\nContraseña: 12345678",
       "highlights": ["Laravel","PHP","React", "JavaScript", "Bootstrap","PostgreSQL"],
       "url": "https://fitplanner.up.railway.app",
@@ -268,6 +281,7 @@
 
     {
       "name": "Easeout",
+      "isActive": true,
       "description": "EaseOut es una aplicación web minimalista y privada diseñada para ayudarte a liberar el estrés emocional mediante entradas de voz y texto.\n\nUsuario de prueba: prueba@prueba.com\nContraseña: 12345678",
       "highlights": ["Laravel","PHP","React", "JavaScript", "Tailwind CSS","PostgreSQL", "Amazon S3"],
       "url": "https://easeout-production.up.railway.app/",
@@ -278,6 +292,7 @@
 
     {
       "name": "Planeat",
+      "isActive": true,
       "description": "Aplicación web de planificación de comidas que utiliza IA (Gemini) para generar menús personalizados y recetas, con listas de compra automáticas y diseño responsive.\n\nUsuario de prueba: demo@planeat.com\nContraseña: 12345678",
       "highlights": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js", "Gemini AI", "Vitest", "Testing Library"],
       "url": "https://planeat.up.railway.app/",
@@ -288,6 +303,7 @@
 
     {
       "name": "GGFit",
+      "isActive": true,
       "description": "Aplicación web que gamifica el fitness utilizando datos de League of Legends. Analiza el rendimiento en partidas y asigna ejercicios personalizados para mejorar la salud mientras juegas.",
       "highlights": ["React", "TypeScript", "Chakra UI", "Supabase", "Riot Games API", "Fitness Gamification"],
       "url": "https://ggfit-six.vercel.app",

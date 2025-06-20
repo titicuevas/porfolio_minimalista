@@ -42,8 +42,8 @@ import { projects } from "@cv"
                       <span class="demo-icon">🔑</span>
                       <div>
                         <strong>¿Quieres probar la app?</strong><br/>
-                        Usuario: <b>{testUser.user}</b><br/>
-                        Contraseña: <b>{testUser.pass}</b>
+                        Usuario: <button class="copy-btn" type="button" data-copy={testUser.user}>{testUser.user}</button><br/>
+                        Contraseña: <button class="copy-btn" type="button" data-copy={testUser.pass}>{testUser.pass}</button>
                       </div>
                     </div>
                   )}
@@ -93,19 +93,19 @@ import { projects } from "@cv"
   }
   article {
     border-radius: 18px;
-    box-shadow: 0 4px 24px #2563eb11;
-    background: var(--color-bg);
+    box-shadow: 0 4px 24px #00000044;
+    background: var(--card-bg-color);
     display: flex;
     flex-direction: column;
     padding: 0 0 18px 0;
     height: 100%;
     transition: box-shadow 0.25s, transform 0.22s;
-    border: 1.5px solid #e0e7ef;
+    border: 1.5px solid var(--card-border-color);
   }
   article:hover {
-    box-shadow: 0 12px 36px #2563eb33;
+    box-shadow: 0 12px 36px #00000066;
     transform: translateY(-6px) scale(1.025);
-    border: 1.5px solid var(--color-accent);
+    border: 1.5px solid var(--primary-color);
   }
   .project-image {
     width: 100%;
@@ -113,7 +113,7 @@ import { projects } from "@cv"
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-bg-hover);
+    background: var(--bg-color);
     border-radius: 18px 18px 0 0;
     overflow: hidden;
   }
@@ -137,16 +137,16 @@ import { projects } from "@cv"
     gap: 8px;
   }
   .project-title a {
-    color: var(--color-primary);
+    color: var(--heading-color);
     text-decoration: none;
     transition: color 0.2s;
   }
   .project-title a:hover {
     text-decoration: underline;
-    color: var(--color-accent);
+    color: var(--primary-color);
   }
   .project-dot {
-    color: #00bc2f;
+    color: var(--secondary-color);
     font-size: 1.2em;
     animation: flicker 3s ease-in infinite;
   }
@@ -154,12 +154,12 @@ import { projects } from "@cv"
     font-size: 1.01rem;
     line-height: 1.35rem;
     margin-bottom: 8px;
-    color: #444;
+    color: var(--text-color);
     white-space: pre-line;
   }
   .project-demo-access {
-    background: #e0f2fe;
-    border: 1.5px solid var(--color-accent);
+    background: var(--bg-color);
+    border: 1.5px solid var(--card-border-color);
     border-radius: 10px;
     padding: 10px 16px;
     margin: 10px 0 14px 0;
@@ -173,7 +173,7 @@ import { projects } from "@cv"
     margin-top: 2px;
   }
   .project-demo-access b {
-    color: var(--color-primary);
+    color: var(--primary-color);
     font-family: 'Fira Mono', monospace;
   }
   .project-badges {
@@ -184,18 +184,18 @@ import { projects } from "@cv"
   }
   .project-badge {
     border-radius: 999px;
-    background: var(--color-bg-hover);
-    color: var(--color-text);
+    background: var(--bg-color);
+    color: var(--text-color);
     font-size: 0.85rem;
     font-weight: 500;
     padding: 0.3rem 1.1rem;
     letter-spacing: 0.01em;
-    box-shadow: 0 1px 2px #2563eb11;
+    box-shadow: 0 1px 2px #00000044;
     transition: background 0.2s, color 0.2s;
   }
   .project-badge:hover {
-    background: var(--color-accent);
-    color: var(--color-white);
+    background: var(--primary-color);
+    color: var(--heading-color);
   }
   .project-actions {
     display: flex;
@@ -204,8 +204,8 @@ import { projects } from "@cv"
     padding: 0 16px;
   }
   .project-btn {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--primary-color);
+    color: var(--heading-color);
     border-radius: 8px;
     padding: 0.45em 1.3em;
     font-size: 1em;
@@ -215,17 +215,17 @@ import { projects } from "@cv"
     display: flex;
     align-items: center;
     gap: 6px;
-    box-shadow: 0 1px 4px #2563eb11;
+    box-shadow: 0 1px 4px #00000044;
   }
   .project-btn:hover {
-    background: var(--color-accent);
+    background: var(--secondary-color);
     transform: scale(1.07);
   }
   .code-btn {
-    background: #222;
+    background: #374151;
   }
   .code-btn:hover {
-    background: #444;
+    background: #4b5563;
   }
   @keyframes flicker {
     0% { opacity: 1; }
@@ -244,4 +244,41 @@ import { projects } from "@cv"
       font-size: 1rem;
     }
   }
+  .copy-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .copy-btn.copied {
+    color: var(--accent-color);
+  }
 </style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.classList.add('copied');
+          const original = btn.textContent;
+          btn.textContent = '¡Copiado!';
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('copied');
+          }, 1200);
+        } catch (e) {
+          btn.textContent = 'Error';
+        }
+      });
+    });
+  });
+</script>

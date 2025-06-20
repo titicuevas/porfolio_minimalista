@@ -11,26 +11,48 @@ const { summary } = basics
     Siempre busco aprender algo nuevo (¡la curiosidad es mi superpoder!) y disfruto colaborando en equipo para lograr resultados increíbles. Mi meta es aportar valor, buen rollo y un toque de innovación a cada proyecto.<br/><br/>
     Si buscas a alguien que combine profesionalidad, ganas de superarse y una pizca de humor geek… ¡aquí me tienes! 😄
   </p>
-  <div style="display: flex; justify-content: center; margin-top: 1rem;">
+  <div class="button-container">
     <a href="/Enrique Cuevas.pdf" download class="btn">
       📄 Descargar CV
+    </a>
+    <a href="/Enrique Cuevas.pdf" target="_blank" class="btn btn-secondary">
+      👀 Ver CV Online
     </a>
   </div>
 </Section>
 
 <style>
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
   .btn {
-    background: #222;
-    color: #fff;
+    background: var(--card-bg-color);
+    color: var(--heading-color);
     padding: 0.6em 1.2em;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
     display: inline-block;
+    border: 1px solid var(--card-border-color);
   }
   .btn:hover {
-    background: #0070f3;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--heading-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  .btn-secondary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--heading-color);
   }
 </style>

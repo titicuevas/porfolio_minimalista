@@ -130,37 +130,37 @@ function getIcon(tech: string) {
   }
   article {
     border-radius: 18px;
-    box-shadow: 0 4px 24px #2563eb11;
-    background: var(--color-bg);
+    box-shadow: 0 4px 24px #00000044;
+    background: var(--card-bg-color);
     padding: 22px 32px;
     transition: box-shadow 0.25s, transform 0.22s;
-    border: 1.5px solid #e0e7ef;
+    border: 1.5px solid var(--card-border-color);
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   article:hover {
-    box-shadow: 0 12px 36px #2563eb33;
+    box-shadow: 0 12px 36px #00000066;
     transform: translateY(-6px) scale(1.025);
-    border: 1.5px solid var(--color-accent);
+    border: 1.5px solid var(--primary-color);
   }
   article h3 {
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--heading-color);
     font-size: 1.18rem;
     margin-bottom: 2px;
   }
   article a {
-    color: var(--color-primary);
+    color: var(--primary-color);
     transition: color 0.2s;
     text-decoration: none;
   }
   article a:hover {
     text-decoration: underline;
-    color: var(--color-accent);
+    color: var(--secondary-color);
   }
   article h4 {
-    color: #222;
+    color: var(--text-color);
     font-weight: 400;
     font-size: 1.05rem;
     margin-bottom: 6px;
@@ -176,13 +176,13 @@ function getIcon(tech: string) {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: var(--color-bg-hover);
+    background: var(--bg-color);
     border-radius: 999px;
     padding: 10px 22px;
     font-size: 1.08em;
     font-weight: 500;
-    color: var(--color-text);
-    box-shadow: 0 2px 8px #2563eb11;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px #00000044;
     transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
   }
@@ -191,10 +191,10 @@ function getIcon(tech: string) {
     height: 34px;
   }
   .stack-chip:hover {
-    background: var(--color-accent);
-    color: var(--color-white);
+    background: var(--primary-color);
+    color: var(--heading-color);
     transform: translateY(-2px) scale(1.10);
-    box-shadow: 0 6px 24px #2563eb33;
+    box-shadow: 0 6px 24px #00000066;
   }
   header {
     display: flex;
@@ -203,7 +203,7 @@ function getIcon(tech: string) {
     margin-bottom: 4px;
   }
   time {
-    color: #555;
+    color: #9ca3af;
     font-size: 0.85rem;
     min-width: 102px;
     cursor: default;

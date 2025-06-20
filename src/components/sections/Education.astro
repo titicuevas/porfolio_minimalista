@@ -42,14 +42,6 @@ import { education } from "@cv"
 </Section>
 
 <style>
-  :root {
-    --color-primary: #2563eb;
-    --color-accent: #38bdf8;
-    --color-bg: #f3f4f6;
-    --color-bg-hover: #e0e7ef;
-    --color-text: #222;
-    --color-white: #fff;
-  }
   ul {
     display: flex;
     flex-direction: column;
@@ -61,29 +53,36 @@ import { education } from "@cv"
     display: flex;
     align-items: center;
     gap: 18px;
-    background: var(--color-bg);
+    background: var(--card-bg-color);
     border-radius: 16px;
-    box-shadow: 0 2px 16px #2563eb11;
     padding: 22px 32px;
     min-height: 80px;
-    border: 1.5px solid #e0e7ef;
+    border: 1.5px solid var(--card-border-color);
     transition: box-shadow 0.25s, transform 0.22s, border 0.2s;
   }
   .edu-card:hover {
-    box-shadow: 0 8px 32px #2563eb33;
     transform: translateY(-4px) scale(1.03);
-    border: 1.5px solid var(--color-accent);
+    border: 1.5px solid var(--primary-color);
   }
   .edu-icon {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-bg-hover);
+    background: var(--bg-color);
     border-radius: 10px;
     width: 56px;
     height: 56px;
   }
+
+  .edu-icon svg path:first-of-type {
+    fill: var(--primary-color);
+  }
+  .edu-icon svg path:last-of-type {
+    fill: var(--text-color);
+    opacity: 0.25;
+  }
+
   .edu-header {
     display: flex;
     align-items: center;
@@ -93,29 +92,30 @@ import { education } from "@cv"
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0;
-    color: var(--color-primary);
+    color: var(--primary-color);
   }
   .edu-info a {
-    color: var(--color-primary);
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.2s;
   }
   .edu-info a:hover {
     text-decoration: underline;
-    color: var(--color-accent);
+    color: var(--accent-color, var(--primary-color));
   }
   .edu-years {
-    color: #555;
+    color: var(--text-color);
+    opacity: 0.8;
     font-size: 1rem;
     font-weight: 400;
     min-width: 102px;
     letter-spacing: 1px;
   }
   .edu-area {
-    color: #444;
+    color: var(--text-color);
+    opacity: 0.9;
     font-size: 1rem;
     margin-top: 2px;
-    font-family: 'Fira Mono', 'Menlo', 'Monaco', monospace;
   }
   @media (width <= 700px) {
     .edu-card {

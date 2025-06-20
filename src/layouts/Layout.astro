@@ -1,5 +1,6 @@
 ---
 import { basics } from "@cv"
+import ThemeSwitcher from "@/components/ThemeSwitcher.astro"
 
 interface Props {
   title: string
@@ -34,20 +35,39 @@ const { image, summary, url } = basics
     <meta name="twitter:image" content="" />
   </head>
   <body>
+    <ThemeSwitcher />
     <slot />
   </body>
 </html>
 
 <style is:global>
+  /*
+   * Remove all animations and transitions for people that prefer not to see them
+   */
+  :root {
+    /* Light theme variables */
+    --bg-color: #F5F5F5;
+    --text-color: #121212;
+    --primary-color: #2563eb;
+    --card-bg-color: #FFFFFF;
+    --card-border-color: #E0E0E0;
+    --accent-color: #38bdf8;
+  }
+
+  html.dark {
+    /* Dark theme variables */
+    --bg-color: #121212;
+    --text-color: #E0E0E0;
+    --primary-color: #3b82f6;
+    --card-bg-color: #1E1E1E;
+    --card-border-color: #2c2c2c;
+  }
+
   html {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      Courier,
-      monospace;
-    background: #fff;
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+    background: var(--bg-color);
+    color: var(--text-color);
     letter-spacing: -0.025rem;
   }
 
@@ -78,6 +98,7 @@ const { image, summary, url } = basics
   h3,
   h4 {
     margin: 0;
+    color: var(--heading-color);
     font-family:
       system-ui,
       -apple-system,
@@ -93,7 +114,7 @@ const { image, summary, url } = basics
   }
 
   p {
-    color: #666;
+    color: var(--text-color);
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
@@ -121,4 +142,32 @@ const { image, summary, url } = basics
       break-inside: avoid;
     }
   }
+
+  /* Animación de entrada para secciones */
+  .fade-section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.7s cubic-bezier(0.17, 0.55, 0.55, 1), transform 0.7s cubic-bezier(0.17, 0.55, 0.55, 1);
+    will-change: opacity, transform;
+  }
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
+
+<script>
+  // Animación de fade-in para secciones
+  window.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
