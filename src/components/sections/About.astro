@@ -6,53 +6,243 @@ const { summary } = basics
 ---
 
 <Section title="Sobre mí">
-  <p>
-    ¡Hola! Soy un apasionado del desarrollo web y un entusiasta de las soluciones creativas. 🚀 Me encanta transformar ideas en aplicaciones modernas, eficientes y minimalistas usando tecnologías como React, Node.js, Laravel y Tailwind CSS.<br/><br/>
-    Siempre busco aprender algo nuevo (¡la curiosidad es mi superpoder!) y disfruto colaborando en equipo para lograr resultados increíbles. Mi meta es aportar valor, buen rollo y un toque de innovación a cada proyecto.<br/><br/>
-    Si buscas a alguien que combine profesionalidad, ganas de superarse y una pizca de humor geek… ¡aquí me tienes! 😄
-  </p>
+  <div class="terminal-container">
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <span class="terminal-button close"></span>
+        <span class="terminal-button minimize"></span>
+        <span class="terminal-button maximize"></span>
+      </div>
+      <div class="terminal-title">about_enrique.exe</div>
+    </div>
+    
+    <div class="terminal-content">
+      <div class="command-line">
+        <span class="prompt">$</span>
+        <span class="command">cat about_enrique.txt</span>
+      </div>
+      
+      <div class="file-content">
+        <p class="typing-text">
+          Hace no mucho tiempo, en un rincón tranquilo de la web, nació un joven con una curiosidad insaciable y una misión: convertir ideas en aventuras digitales. Como Luffy soñando con ser el Rey de los Piratas 🏴‍☠️ o Naruto buscando su lugar en el mundo ninja 🍥, yo también tengo mi propio sueño: ¡crear proyectos que inspiren, ayuden y saquen una sonrisa!
+        </p>
+        
+        <p class="typing-text delay-1">
+          Mi superpoder es la curiosidad (y el ColaCao 🥛🍫). Cada bug es un enemigo a derrotar, cada nueva tecnología es un power-up ⚡, y cada equipo es una tripulación con la que compartir risas, retos y logros. Me apasiona transformar ideas locas en aplicaciones útiles y minimalistas usando React ⚛️, Node.js 🟩, Laravel 🦸‍♂️ y Tailwind CSS 🌬️.
+        </p>
+        
+        <p class="typing-text delay-2">
+          <strong>Pero más allá del código, disfruto el viaje y me esfuerzo por entregar soluciones de calidad, aprendiendo y creciendo en cada proyecto.</strong> He ayudado a transformar ideas en productos reales que hoy usan cientos de personas, y siempre busco que cada línea de código cuente.
+        </p>
+        
+        <p class="typing-text delay-3">
+          Si buscas a alguien que aporte profesionalidad, energía positiva y un toque de aventura a tu equipo… ¡únete a mi tripulación! 🚢✨
+        </p>
+        
+        <p class="typing-text delay-4">
+          ¿Te animas a crear algo épico juntos? ¡Hablemos!
+        </p>
+        
+        <p class="typing-text delay-5">
+          PD: Si el bug es difícil, lo solucionamos juntos (y si hace falta, con pizza 🍕, memes 🤣 y, por supuesto, ColaCao 🥛).
+        </p>
+        <p class="typing-text delay-6" style="color:var(--retro-yellow);font-family:'Press Start 2P',monospace;font-size:1rem;">
+          🕹️ Hay un <b>easter egg</b> oculto en esta web.<br/>
+          <span style="color:var(--retro-blue);">Pista:</span> prueba el <b>código Konami</b> 😉
+        </p>
+      </div>
+      
+      <div class="command-line typing-effect">
+        <span class="prompt">$</span>
+        <span class="cursor">_</span>
+      </div>
+    </div>
+  </div>
+  
   <div class="button-container">
-    <a href="/Enrique Cuevas.pdf" download class="btn">
+    <a href="/Enrique Cuevas.pdf" download class="pixel-button">
       📄 Descargar CV
     </a>
-    <a href="/Enrique Cuevas.pdf" target="_blank" class="btn btn-secondary">
+    <a href="/Enrique Cuevas.pdf" target="_blank" class="pixel-button btn-secondary">
       👀 Ver CV Online
     </a>
   </div>
 </Section>
 
 <style>
+  .terminal-container {
+    background: var(--card-bg-color);
+    border: var(--pixel-border) solid var(--card-border-color);
+    box-shadow: var(--pixel-shadow);
+    margin-bottom: 2rem;
+    font-family: "VT323", monospace;
+    overflow: hidden;
+  }
+
+  .terminal-header {
+    background: var(--primary-color);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: var(--pixel-border) solid var(--card-border-color);
+  }
+
+  .terminal-buttons {
+    display: flex;
+    gap: 6px;
+  }
+
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border: var(--pixel-border) solid var(--text-color);
+    background: var(--retro-yellow);
+  }
+
+  .terminal-button.close {
+    background: var(--retro-orange);
+  }
+
+  .terminal-button.minimize {
+    background: var(--retro-yellow);
+  }
+
+  .terminal-button.maximize {
+    background: var(--retro-green);
+  }
+
+  .terminal-title {
+    color: var(--text-color);
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.7rem;
+    margin-left: auto;
+  }
+
+  .terminal-content {
+    padding: 20px;
+    background: var(--terminal-bg);
+    color: var(--terminal-text);
+    min-height: 300px;
+  }
+
+  .command-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--terminal-command);
+    font-weight: bold;
+  }
+
+  .prompt {
+    color: var(--retro-blue);
+    font-weight: bold;
+  }
+
+  .command {
+    color: var(--retro-yellow);
+  }
+
+  .file-content {
+    margin-bottom: 20px;
+    color: var(--terminal-text);
+  }
+
+  .typing-text {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+
+  .typing-text.delay-1 { animation-delay: 1s; }
+  .typing-text.delay-2 { animation-delay: 2s; }
+  .typing-text.delay-3 { animation-delay: 3s; }
+  .typing-text.delay-4 { animation-delay: 4s; }
+  .typing-text.delay-5 { animation-delay: 5s; }
+  .typing-text.delay-6 { animation-delay: 6s; }
+
+  .cursor {
+    animation: blink 1s infinite;
+    color: var(--retro-green);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
   .button-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
   }
-  .btn {
-    background: var(--card-bg-color);
-    color: var(--heading-color);
-    padding: 0.6em 1.2em;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    display: inline-block;
-    border: 1px solid var(--card-border-color);
-  }
-  .btn:hover {
-    background: var(--primary-color);
-    color: var(--heading-color);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-  }
+
   .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background: transparent !important;
+    color: var(--primary-color) !important;
+    border: var(--pixel-border) solid var(--primary-color) !important;
   }
+
   .btn-secondary:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--heading-color);
+    background: var(--primary-color) !important;
+    color: var(--card-bg-color) !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .terminal-content {
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+    
+    .terminal-title {
+      font-size: 0.6rem;
+    }
+    
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>
+
+<script>
+  // Efecto de escritura adicional para el cursor
+  document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.querySelector('.cursor');
+    if (cursor && cursor instanceof HTMLElement) {
+      let visible = true;
+      setInterval(() => {
+        visible = !visible;
+        cursor.style.opacity = visible ? '1' : '0';
+      }, 500);
+    }
+    // Sonidos personalizados para los botones de CV
+    const sonicSound = new Audio('/sonic-ring.mp3');
+    sonicSound.volume = 0.25;
+    const marioSound = new Audio('/mario-powerup.mp3');
+    marioSound.volume = 0.25;
+    const btnDescargar = document.querySelector('a[download]');
+    if (btnDescargar) {
+      btnDescargar.addEventListener('click', () => {
+        try { sonicSound.currentTime = 0; sonicSound.play(); } catch (e) {}
+      });
+    }
+    const btnVerOnline = document.querySelector('a.btn-secondary, a.pixel-button.btn-secondary');
+    if (btnVerOnline) {
+      btnVerOnline.addEventListener('click', () => {
+        try { marioSound.currentTime = 0; marioSound.play(); } catch (e) {}
+      });
+    }
+  });
+</script>

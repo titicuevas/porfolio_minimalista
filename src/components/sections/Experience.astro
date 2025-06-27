@@ -138,6 +138,7 @@ function getIcon(tech: string) {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 18px;
   }
   article:hover {
     box-shadow: 0 12px 36px #00000066;
@@ -145,10 +146,11 @@ function getIcon(tech: string) {
     border: 1.5px solid var(--primary-color);
   }
   article h3 {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--heading-color);
-    font-size: 1.18rem;
+    font-size: 1.22rem;
     margin-bottom: 2px;
+    letter-spacing: -0.01em;
   }
   article a {
     color: var(--primary-color);
@@ -161,40 +163,76 @@ function getIcon(tech: string) {
   }
   article h4 {
     color: var(--text-color);
-    font-weight: 400;
-    font-size: 1.05rem;
+    font-weight: 500;
+    font-size: 1.08rem;
     margin-bottom: 6px;
+    letter-spacing: -0.01em;
   }
   .stack-chips-row {
     display: flex;
-    gap: 16px;
-    margin: 18px 0 18px 0;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    gap: 14px;
+    justify-content: center;
+    margin: 18px 0 18px 0;
   }
   .stack-chip {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     background: var(--bg-color);
     border-radius: 999px;
-    padding: 10px 22px;
-    font-size: 1.08em;
+    padding: 7px 16px;
+    font-size: 1em;
     font-weight: 500;
     color: var(--text-color);
     box-shadow: 0 2px 8px #00000044;
     transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    min-width: 80px;
+    justify-content: center;
+    white-space: nowrap;
+    position: relative;
   }
-  .stack-chip svg {
-    width: 34px;
-    height: 34px;
+  .stack-chip svg,
+  .stack-chip svg * {
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+    opacity: 1 !important;
+    width: 18px;
+    height: 18px;
   }
-  .stack-chip:hover {
+  /* Modo oscuro: texto e iconos blancos */
+  :root[data-theme="dark"] .stack-chip,
+  body.dark .stack-chip {
+    color: #fff;
+  }
+  .stack-chip:hover, .stack-chip:active {
     background: var(--primary-color);
-    color: var(--heading-color);
-    transform: translateY(-2px) scale(1.10);
+    color: #fff;
+    transform: scale(1.07);
     box-shadow: 0 6px 24px #00000066;
+  }
+  .stack-chip[data-tooltip]:hover:after, .stack-chip[data-tooltip]:focus:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px #00000044;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .stack-chip[data-tooltip]:after {
+    opacity: 0;
+    transition: opacity 0.2s;
   }
   header {
     display: flex;
@@ -234,15 +272,46 @@ function getIcon(tech: string) {
   [data-title] {
     position: relative;
   }
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-    .stack-chips-row {
-      justify-content: center;
+  @media (max-width: 700px) {
+    ul {
+      gap: 22px;
     }
     article {
-      padding: 14px 6px;
+      padding: 12px 4px;
+      margin-bottom: 12px;
     }
+    .stack-chips-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      justify-items: center;
+      margin: 10px 0 10px 0;
+    }
+    .stack-chip {
+      padding: 6px 10px;
+      font-size: 0.93em;
+      min-width: 70px;
+      gap: 5px;
+    }
+    .stack-chip svg,
+    .stack-chip svg * {
+      width: 15px;
+      height: 15px;
+    }
+    article h3 {
+      font-size: 1.08rem;
+    }
+    article h4 {
+      font-size: 0.98rem;
+    }
+  }
+  .icon-laravel,
+  .icon-php,
+  .icon-wordpress,
+  .icon-postgresql {
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+    opacity: 1 !important;
   }
 </style>

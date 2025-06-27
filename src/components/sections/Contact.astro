@@ -51,24 +51,29 @@ const github = "https://github.com/tu-github" // Cambia por tu URL
   }
 
   .action-btn {
-    background: var(--card-bg-color);
-    color: var(--heading-color);
+    background: var(--primary-color);
+    color: #fff;
+    border: var(--pixel-border) solid var(--text-color);
+    box-shadow: var(--pixel-shadow);
+    font-family: "Press Start 2P", monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
     padding: 0.6em 1.2em;
-    border-radius: 8px;
-    text-decoration: none;
     font-weight: 500;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-decoration: none;
+    transition: all 0.15s;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid var(--card-border-color);
     cursor: pointer;
-    font-family: inherit;
   }
   .action-btn:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
+    background: var(--accent-color);
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: var(--pixel-shadow-hover);
   }
   .action-btn svg {
     width: 20px;

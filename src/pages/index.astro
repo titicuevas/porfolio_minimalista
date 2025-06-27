@@ -15,29 +15,60 @@ const { name, label } = basics
 ---
 
 <Layout title={`Portfolio  de ${name} - ${label}`}>
-  <main>
-    <Hero class="fade-section" />
-    <About class="fade-section" />
-    <Experience class="fade-section" />
-    <Education class="fade-section" />
-    <Projects class="fade-section" />
-    <Skills class="fade-section" />
-    <Contact class="fade-section" />
-  </main>
+  <div class="pixel-background">
+    <main>
+      <Hero class="fade-section" />
+      <About class="fade-section" />
+      <Experience class="fade-section" />
+      <Education class="fade-section" />
+      <Projects class="fade-section" />
+      <Skills class="fade-section" />
+      <Contact class="fade-section" />
+    </main>
+  </div>
 
   <KeyboardManager />
 </Layout>
 
 <style>
+  .pixel-background {
+    position: relative;
+    min-height: 100vh;
+    background: var(--bg-color);
+  }
+
+  .pixel-background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 107, 107, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(78, 205, 196, 0.1) 2px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   main {
-    padding: 4rem;
+    padding: 2rem;
     margin: auto;
     width: 100%;
+    max-width: 1200px;
   }
 
   @media (width <= 700px) {
     main {
-      padding: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    main {
+      padding: 0.5rem;
     }
   }
 </style>

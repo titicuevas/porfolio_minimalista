@@ -205,27 +205,37 @@ import { projects } from "@cv"
   }
   .project-btn {
     background: var(--primary-color);
-    color: var(--heading-color);
-    border-radius: 8px;
-    padding: 0.45em 1.3em;
+    color: #fff;
+    border: var(--pixel-border) solid var(--text-color);
+    box-shadow: var(--pixel-shadow);
+    font-family: "Press Start 2P", monospace;
     font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    padding: 0.45em 1.3em;
     font-weight: 500;
     text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+    transition: all 0.15s;
     display: flex;
     align-items: center;
     gap: 6px;
-    box-shadow: 0 1px 4px #00000044;
   }
   .project-btn:hover {
-    background: var(--secondary-color);
-    transform: scale(1.07);
+    background: var(--accent-color);
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: var(--pixel-shadow-hover);
   }
   .code-btn {
     background: #374151;
+    color: #fff;
+    border: var(--pixel-border) solid var(--card-border-color);
   }
   .code-btn:hover {
-    background: #4b5563;
+    background: #4d96ff;
+    color: #fff;
+    border-color: var(--primary-color);
   }
   @keyframes flicker {
     0% { opacity: 1; }

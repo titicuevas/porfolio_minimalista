@@ -1,31 +1,47 @@
 ---
 // ThemeSwitcher.astro
 ---
-<button id="theme-toggle" title="Cambiar tema">
+<button id="theme-toggle" title="Cambiar tema" class="pixel-theme-toggle">
   <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path></svg>
   <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path></svg>
 </button>
 
 <style>
-  #theme-toggle {
+  .pixel-theme-toggle {
     position: fixed;
     z-index: 999;
     top: 1rem;
     right: 1rem;
     background: var(--card-bg-color);
-    border: 1px solid var(--card-border-color);
+    border: var(--pixel-border) solid var(--card-border-color);
     color: var(--text-color);
-    border-radius: 999px;
-    padding: 0.5rem;
+    padding: 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background .2s, border-color .2s;
+    transition: all 0.2s ease;
+    box-shadow: var(--pixel-shadow);
+    font-family: "Press Start 2P", monospace;
+    width: 48px;
+    height: 48px;
   }
-  #theme-toggle:hover {
-    background: var(--bg-color);
-    border-color: var(--primary-color);
+  
+  .pixel-theme-toggle:hover {
+    background: var(--primary-color);
+    border-color: var(--text-color);
+    transform: translate(-2px, -2px);
+    box-shadow: var(--pixel-shadow-hover);
+  }
+
+  .pixel-theme-toggle:active {
+    transform: translate(0px, 0px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .pixel-theme-toggle svg {
+    width: 20px;
+    height: 20px;
   }
 
   #moon-icon,
@@ -36,6 +52,21 @@
   #sun-icon,
   html.dark #moon-icon {
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    .pixel-theme-toggle {
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+    }
+    
+    .pixel-theme-toggle svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 </style>
 
