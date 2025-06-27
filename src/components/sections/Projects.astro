@@ -6,70 +6,72 @@ import { projects } from "@cv"
 ---
 
 <Section title="Proyectos">
-  <ul>
-    {
-      projects.map(
-        ({ url, description, highlights, name, isActive, github, image, stack }) => {
-          // Detectar si hay usuario demo en la descripción
-          let testUser = null;
-          let desc = description;
-          const userMatch = description.match(/Usuario de prueba: (.+)\nContraseña: (.+)/) || description.match(/Usuario: (.+)\nContraseña: (.+)/);
-          if (userMatch) {
-            testUser = {
-              user: userMatch[1].trim(),
-              pass: userMatch[2].trim()
-            };
-            desc = description.replace(/\n?Usuario( de prueba)?: .+\nContraseña: .+/, "");
-          }
-          return (
-            <li class="project-card">
-              <article>
-                <div class="project-image">
-                  {image ? (
-                    <img src={image} alt={`Logo de ${name}`} />
-                  ) : (
-                    <div class="project-placeholder">🚀</div>
-                  )}
-                </div>
-                <header>
-                  <h3 class="project-title">
-                    <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>{name}</a>
-                    {isActive && <span class="project-dot">•</span>}
-                  </h3>
-                  <p class="project-desc">{desc}</p>
-                  {testUser && (
-                    <div class="project-demo-access">
-                      <span class="demo-icon">🔑</span>
-                      <div>
-                        <strong>¿Quieres probar la app?</strong><br/>
-                        Usuario: <button class="copy-btn" type="button" data-copy={testUser.user}>{testUser.user}</button><br/>
-                        Contraseña: <button class="copy-btn" type="button" data-copy={testUser.pass}>{testUser.pass}</button>
+  <div class="projects-wrapper">
+    <ul>
+      {
+        projects.map(
+          ({ url, description, highlights, name, isActive, github, image, stack }) => {
+            // Detectar si hay usuario demo en la descripción
+            let testUser = null;
+            let desc = description;
+            const userMatch = description.match(/Usuario de prueba: (.+)\nContraseña: (.+)/) || description.match(/Usuario: (.+)\nContraseña: (.+)/);
+            if (userMatch) {
+              testUser = {
+                user: userMatch[1].trim(),
+                pass: userMatch[2].trim()
+              };
+              desc = description.replace(/\n?Usuario( de prueba)?: .+\nContraseña: .+/, "");
+            }
+            return (
+              <li class="project-card">
+                <article>
+                  <div class="project-image">
+                    {image ? (
+                      <img src={image} alt={`Logo de ${name}`} />
+                    ) : (
+                      <div class="project-placeholder">🚀</div>
+                    )}
+                  </div>
+                  <header>
+                    <h3 class="project-title">
+                      <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>{name}</a>
+                      {isActive && <span class="project-dot">•</span>}
+                    </h3>
+                    <p class="project-desc">{desc}</p>
+                    {testUser && (
+                      <div class="project-demo-access">
+                        <span class="demo-icon">🔑</span>
+                        <div>
+                          <strong>¿Quieres probar la app?</strong><br/>
+                          Usuario: <button class="copy-btn" type="button" data-copy={testUser.user}>{testUser.user}</button><br/>
+                          Contraseña: <button class="copy-btn" type="button" data-copy={testUser.pass}>{testUser.pass}</button>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </header>
-                <div class="project-badges">
-                  {highlights.map((highlight) => {
-                    return <span class="project-badge">{highlight}</span>
-                  })}
-                </div>
-                <footer class="project-actions">
-                  {url && (
-                    <a href={url} target="_blank" class="project-btn">Ver demo</a>
-                  )}
-                  {github && (
-                    <a href={github} target="_blank" class="project-btn code-btn">
-                      <GitHub /> Código
-                    </a>
-                  )}
-                </footer>
-              </article>
-            </li>
-          )
-        }
-      )
-    }
-  </ul>
+                    )}
+                  </header>
+                  <div class="project-badges">
+                    {highlights.map((highlight) => {
+                      return <span class="project-badge">{highlight}</span>
+                    })}
+                  </div>
+                  <footer class="project-actions">
+                    {url && (
+                      <a href={url} target="_blank" class="project-btn">Ver demo</a>
+                    )}
+                    {github && (
+                      <a href={github} target="_blank" class="project-btn code-btn">
+                        <GitHub /> Código
+                      </a>
+                    )}
+                  </footer>
+                </article>
+              </li>
+            )
+          }
+        )
+      }
+    </ul>
+  </div>
 </Section>
 
 <style>
@@ -81,11 +83,20 @@ import { projects } from "@cv"
     --color-text: #222;
     --color-white: #fff;
   }
+  .projects-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     margin-inline: 0;
+    width: 100%;
+    max-width: 1200px;
   }
   .project-card {
     list-style: none;
@@ -97,7 +108,7 @@ import { projects } from "@cv"
     background: var(--card-bg-color);
     display: flex;
     flex-direction: column;
-    padding: 0 0 18px 0;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
     height: 100%;
     transition: box-shadow 0.25s, transform 0.22s;
     border: 1.5px solid var(--card-border-color);
@@ -135,6 +146,8 @@ import { projects } from "@cv"
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: center;
+    text-align: center;
   }
   .project-title a {
     color: var(--heading-color);
@@ -202,6 +215,9 @@ import { projects } from "@cv"
     gap: 10px;
     margin-top: auto;
     padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .project-btn {
     background: var(--primary-color);
@@ -243,15 +259,30 @@ import { projects } from "@cv"
     100% { opacity: 1; }
   }
   @media (width <= 700px) {
+    .projects-wrapper {
+      padding: 1.2rem 0.2rem;
+    }
     ul {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.2rem;
     }
     .project-image {
       height: 80px;
     }
     .project-title {
       font-size: 1rem;
+      justify-content: center;
+      text-align: center;
+    }
+    article {
+      padding: 1rem 0.5rem 0.8rem 0.5rem;
+    }
+    .project-actions {
+      flex-direction: column;
+      gap: 0.7rem;
+      padding: 0 0.2rem;
+      margin-top: 1.2rem;
+      align-items: center;
     }
   }
   .copy-btn {

@@ -363,7 +363,7 @@ const { image, summary, url } = basics
     const msg = document.createElement('div');
     msg.id = 'konami-message';
     msg.className = 'konami-message';
-    msg.innerHTML = '¡Logro desbloqueado!<br>Has encontrado el <b>Konami Code</b> 🎮';
+    msg.innerHTML = '¡Logro desbloqueado!<br>Has encontrado el <b>Konami Code</b> 🎮<br><span style="font-size:1.1em;color:#ffd93d;">Snake activada</span>';
     document.body.appendChild(msg);
     setTimeout(() => {
       msg.remove();
@@ -373,23 +373,31 @@ const { image, summary, url } = basics
     if (e.keyCode === KONAMI[konamiIndex]) {
       konamiIndex++;
       if (konamiIndex === KONAMI.length) {
+        // Reproducir sonido coin
+        try {
+          const coinSound = new Audio('/coin.mp3');
+          coinSound.volume = 0.5;
+          coinSound.currentTime = 0;
+          coinSound.play();
+        } catch (e) {}
         showKonamiMessage();
+        showSnakeAnimation();
         konamiIndex = 0;
       }
     } else {
       konamiIndex = 0;
     }
   });
-
   function showSnakeAnimation() {
     if (document.getElementById('snake-konami')) return;
+    // Canvas para la Snake
     const canvas = document.createElement('canvas');
     canvas.id = 'snake-konami';
     canvas.width = window.innerWidth;
     canvas.height = 64;
     canvas.style.position = 'fixed';
     canvas.style.left = '0';
-    canvas.style.top = '50%';
+    canvas.style.top = '60%'; // Más abajo para que no tape el mensaje
     canvas.style.transform = 'translateY(-50%)';
     canvas.style.zIndex = '99999';
     canvas.style.pointerEvents = 'none';
@@ -401,24 +409,28 @@ const { image, summary, url } = basics
     const snakeLength = 14;
     const pixel = 20;
     let x = -snakeLength * pixel;
+    let frame = 0;
     function drawSnake() {
       ctx?.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < snakeLength; i++) {
+        // Movimiento ondulado: la cabeza sube y baja suavemente
+        const wave = Math.sin((frame + i * 3) / 8) * 8;
         if (ctx) ctx.fillStyle = i === 0 ? '#ffd93d' : '#4ecdc4';
-        ctx?.fillRect(x + i * pixel, 20, pixel, pixel);
+        ctx?.fillRect(x + i * pixel, 20 + wave, pixel, pixel);
         // Ojos
         if (i === 0) {
           if (ctx) ctx.fillStyle = '#232323';
-          ctx?.fillRect(x + 6, 28, 4, 4);
-          ctx?.fillRect(x + 12, 28, 4, 4);
+          ctx?.fillRect(x + 6, 28 + wave, 4, 4);
+          ctx?.fillRect(x + 12, 28 + wave, 4, 4);
         }
       }
     }
     function animate() {
-      x += 10;
+      x += 8; // Más rápido
+      frame++;
       drawSnake();
       if (x < window.innerWidth) {
-        requestAnimationFrame(animate);
+        setTimeout(() => requestAnimationFrame(animate), 14); // Más rápido
       } else {
         canvas.remove();
       }
