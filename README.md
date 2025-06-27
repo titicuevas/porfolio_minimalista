@@ -1,7 +1,8 @@
-# Portfolio Minimalista
+# Portfolio Minimalista - Edición Pixel Art 🎮
 
-Este es un proyecto de un portfolio minimalista creado con las siguientes tecnologías:
+Este es un portfolio minimalista con un rediseño completo en **pixel art** y un montón de detalles retro y easter eggs para sorprender a cualquier visitante.
 
+## 🚀 Tecnologías principales
 - **Astro** - El framework web de la nueva época.
 - **TypeScript** - JavaScript con sintaxis de tipado.
 - **Ninja Keys** - Menú desplegable con atajos de teclado hecho en puro JavaScript. [Ninja Keys](https://github.com/ssleptsov/ninja-keys).
@@ -10,33 +11,22 @@ Este es un proyecto de un portfolio minimalista creado con las siguientes tecnol
 
 ---
 
-## 🚀 Empezar
+## 🎨 Características Pixel Art y Retro
 
-1. Usa este repo como template de un proyecto de Astro.
-
-    Yo uso pnpm como gestor de dependencias y empaquetador.
-
-    ```sh
-    # Activa pnpm en MacOS, WSL & Linux:
-    corepack enable
-    corepack prepare pnpm@latest --activate
-
-    # Inicializa el proyecto
-    npm create astro@latest -- --template titicuevas/minimalist-portfolio-json
-    ```
-
-2. Añade tu contenido:
-
-    Edita el archivo `cv.json` para crear tu propio Portfolio /CV imprimible.
-
-3. Lanza el servidor de desarrollo:
-
-    ```sh
-    # Disfruta del resultado
-    pnpm dev
-    ```
-
-    Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver el resultado 🚀
+- **Estilo visual pixel art** en todo el portfolio: fuentes, botones, títulos, tarjetas y layout.
+- **Animaciones y efectos retro**:
+  - Efecto glitch en títulos y botones al hacer hover.
+  - Botones y títulos con sombras y colores vibrantes.
+  - Fondo animado: estrellas pixel art en modo oscuro y píxeles pastel en modo claro.
+- **Cursor pixel art** (puedes personalizarlo en `/public/pixel-cursor.png`).
+- **Sonidos retro**:
+  - Sonido de anillo de Sonic al descargar el CV.
+  - Sonido de power-up de Mario al ver el CV online.
+- **Terminal pixel art** en la sección "Sobre mí".
+- **Easter egg oculto**:
+  - Si introduces el **Konami Code** (↑ ↑ ↓ ↓ ← → ← → B A) aparece un mensaje secreto y una Snake pixel art cruza la pantalla.
+- **Pistas de easter egg** en la sección "Sobre mí".
+- **Botones y acciones con feedback visual y sonoro**.
 
 ---
 
@@ -61,3 +51,15 @@ Puedes probar el portfolio minimalista en línea haciendo clic en el siguiente b
     </button>
   </a>
 </div>
+
+---
+
+## 🕹️ Detalles y personalización
+
+- Puedes personalizar los colores, el fondo, el cursor y los sonidos desde la carpeta `/public` y los archivos de estilos globales.
+- El easter egg del Konami Code es totalmente personalizable (mensaje, animación, etc).
+- Todos los efectos y animaciones están hechos con CSS y JavaScript puro para máxima compatibilidad.
+
+---
+
+¡Disfruta del viaje retro y sorprende a tus visitantes con un portfolio único y lleno de personalidad! 👾
