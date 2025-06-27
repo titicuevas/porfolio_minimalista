@@ -402,15 +402,15 @@ const { image, summary, url } = basics
     const pixel = 20;
     let x = -snakeLength * pixel;
     function drawSnake() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx?.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < snakeLength; i++) {
-        ctx.fillStyle = i === 0 ? '#ffd93d' : '#4ecdc4';
-        ctx.fillRect(x + i * pixel, 20, pixel, pixel);
+        if (ctx) ctx.fillStyle = i === 0 ? '#ffd93d' : '#4ecdc4';
+        ctx?.fillRect(x + i * pixel, 20, pixel, pixel);
         // Ojos
         if (i === 0) {
-          ctx.fillStyle = '#232323';
-          ctx.fillRect(x + 6, 28, 4, 4);
-          ctx.fillRect(x + 12, 28, 4, 4);
+          if (ctx) ctx.fillStyle = '#232323';
+          ctx?.fillRect(x + 6, 28, 4, 4);
+          ctx?.fillRect(x + 12, 28, 4, 4);
         }
       }
     }
