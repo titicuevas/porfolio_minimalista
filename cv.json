@@ -302,6 +302,32 @@
     },
 
     {
+      "name": "Linkeout",
+      "description": "Plataforma innovadora para superar el rechazo laboral, motivarte y gestionar candidaturas con IA, retos físicos y comunidad de apoyo.",
+      "highlights": [
+        "React 19",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase",
+        "Node.js",
+        "Express",
+        "Google Gemini AI"
+      ],
+      "url": "https://linkout.up.railway.app/",
+      "github": "https://github.com/titicuevas/Linkout", 
+      "stack": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase",
+        "Node.js",
+        "Express",
+        "Google Gemini AI"
+      ],
+      "image": "/Linkout.png"
+    },
+
+    {
       "name": "GGFit",
       "isActive": true,
       "description": "Aplicación web que gamifica el fitness utilizando datos de League of Legends. Analiza el rendimiento en partidas y asigna ejercicios personalizados para mejorar la salud mientras juegas.",

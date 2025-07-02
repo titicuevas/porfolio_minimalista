@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "astro": "^5.9.4",
+    "astro": "^5.10.2",
     "hotkeypad": "0.1.1",
     "minimalist-portfolio-json": "file:",
     "ninja-keys": "^1.2.2",
