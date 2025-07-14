@@ -302,27 +302,28 @@
     },
 
     {
-      "name": "Linkeout",
-      "description": "Plataforma innovadora para superar el rechazo laboral, motivarte y gestionar candidaturas con IA, retos físicos y comunidad de apoyo.",
+      "name": "Linkout",
+      "description": "App para desarrolladores junior que organiza la búsqueda de empleo, motiva con IA y permite seguimiento avanzado de candidaturas.",
       "highlights": [
+        "Gestión de candidaturas",
+        "Dashboard de estadísticas",
+        "Motivación IA",
+        "Retos de bienestar",
+        "Feedback de reclutadores",
+        "Posts anónimos",
+        "Responsive"
+      ],
+      "url": "https://linkout.up.railway.app/",
+      "github": "https://github.com/titicuevas/Linkout", 
+      "stack": [
         "React 19",
         "Vite",
         "Tailwind CSS",
         "Supabase",
         "Node.js",
         "Express",
-        "Google Gemini AI"
-      ],
-      "url": "https://linkout.up.railway.app/",
-      "github": "https://github.com/titicuevas/Linkout", 
-      "stack": [
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "Supabase",
-        "Node.js",
-        "Express",
-        "Google Gemini AI"
+        "Google Gemini AI",
+        "Recharts"
       ],
       "image": "/Linkout.png"
     },
