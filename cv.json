@@ -303,7 +303,7 @@
 
     {
       "name": "Linkout",
-      "description": "App para desarrolladores junior que organiza la búsqueda de empleo, motiva con IA y permite seguimiento avanzado de candidaturas.",
+      "description": "App para desarrolladores junior que organiza la búsqueda de empleo, motiva con IA y permite seguimiento avanzado de candidaturas.\n\nUsuario de prueba: demo@demo.es\nContraseña: 12345678",
       "highlights": [
         "Gestión de candidaturas",
         "Dashboard de estadísticas",
