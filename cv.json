@@ -29,6 +29,20 @@
   },
   "work": [
     {
+      "name": "Minsait",
+      "position": "Desarrollador QE",
+      "startDate": "2025-10",
+      "endDate": "Actualmente",
+      "summary": "Desarrollo de pruebas para validar el funcionamiento de diferentes aplicaciones para BBVA. Creación de tests basados en escenarios para asegurar calidad, estabilidad y correcto comportamiento funcional.",
+      "highlights": [
+        "Diseño y desarrollo de pruebas funcionales por escenarios.",
+        "Validación del comportamiento de aplicaciones para BBVA.",
+        "Aseguramiento de la calidad en entornos de testing."
+      ],
+      "url": "https://www.minsait.com/es",
+      "stack": ["Node.js", "Cucumber", "Tesito"]
+    },
+    {
       "name": "Desarrollador Web Autónomo",
       "position": "Desarrollador Web Full Stack",
       "startDate": "2024-02",
