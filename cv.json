@@ -29,6 +29,21 @@
   },
   "work": [
     {
+      "name": "Indra / Minsait",
+      "position": "Ingeniero de Calidad (QE)",
+      "startDate": "2025-01",
+      "endDate": "Actualmente",
+      "summary": "Ingeniero de calidad en un proyecto interno del BBVA, centrado en la automatización de pruebas y la mejora de la calidad del software en entornos empresariales. Desarrollo de suites de testing con Node.js y JavaScript, implementación de escenarios BDD con Cucumber y Gherkin, y colaboración estrecha con equipos de desarrollo para integrar las pruebas en el ciclo de entrega. Análisis de requisitos, diseño de casos de prueba, ejecución de regresiones y mantenimiento de frameworks de automatización.",
+      "highlights": [
+        "Automatización de pruebas E2E y de integración en proyecto bancario.",
+        "Desarrollo de escenarios BDD con Cucumber y Gherkin.",
+        "Frameworks y utilidades de testing en Node.js y JavaScript.",
+        "Colaboración con equipos ágiles en entorno corporativo."
+      ],
+      "url": "https://www.minsait.com/",
+      "stack": ["Node.js", "JavaScript", "Cucumber", "Git"]
+    },
+    {
       "name": "Desarrollador Web Autónomo",
       "position": "Desarrollador Web Full Stack",
       "startDate": "2024-02",
@@ -138,7 +153,7 @@
     {
       "name": "JavaScript",
 
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack", "QA", "Testing", "Automatización"]
     },
     {
       "name": "React",
@@ -233,6 +248,34 @@
     {
       "name": "AWS",
       "keywords": ["Cloud Computing", "DevOps", "Servidores", "Backend"]
+    },
+    {
+      "name": "Node.js",
+      "keywords": ["Backend", "JavaScript", "Automatización", "Testing"]
+    },
+    {
+      "name": "Cucumber",
+      "keywords": ["BDD", "Testing", "QA", "Automatización"]
+    },
+    {
+      "name": "Gherkin",
+      "keywords": ["BDD", "Cucumber", "Testing", "QA"]
+    },
+    {
+      "name": "Testing automatizado",
+      "keywords": ["QA", "E2E", "Integración", "Regresión"]
+    },
+    {
+      "name": "jsPDF",
+      "keywords": ["JavaScript", "PDF", "Frontend"]
+    },
+    {
+      "name": "PWA",
+      "keywords": ["Frontend", "Web", "Mobile"]
+    },
+    {
+      "name": "Vercel",
+      "keywords": ["DevOps", "Deploy", "Hosting"]
     }
   ],
   "languages": [
@@ -252,9 +295,11 @@
   "projects": [
     {
       "name": "Sportbuddy",
+      "pinned": true,
       "isActive": false,
-      "description": "Aplicacion web, para crear eventos deportivos y unirse a ellos.",
+      "description": "Proyecto de fin de grado (TFG). Aplicación web para crear eventos deportivos y unirse a ellos.",
       "highlights": [
+        "Proyecto fin de grado",
         "Creador de Eventos deportivos",
         "PHP",
         "Laravel",
@@ -266,6 +311,24 @@
       "url": "https://github.com/titicuevas/SportBuddy",
       "github": "https://github.com/titicuevas/SportBuddy",
       "stack": ["PHP", "Laravel", "Alpine.js", "Tailwind CSS", "PostgreSQL", "PayPal"]
+    },
+
+    {
+      "name": "Porra Mundial 2026",
+      "isActive": true,
+      "description": "Quiniela express para el Mundial 2026 (USA, México y Canadá), montada entre colegas en plan rápido. La fase de grupos es opcional (diversión y PDF); la quiniela que cuenta es la de eliminatorias, con apuestas especiales y pronósticos ronda a ronda. Incluye mascotas de los tres países anfitriones, exportación a PDF y enlace para compartir por WhatsApp.",
+      "highlights": [
+        "HTML",
+        "JavaScript",
+        "Tailwind CSS",
+        "jsPDF",
+        "PWA",
+        "Vercel"
+      ],
+      "url": "https://porra-mundial-2026-rust.vercel.app/",
+      "github": "https://github.com/titicuevas/Porra-Mundial-2026",
+      "stack": ["HTML", "JavaScript", "Tailwind CSS", "jsPDF", "PWA", "Vercel"],
+      "image": "/PorraMundial2026.png"
     },
 
     {

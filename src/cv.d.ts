@@ -125,11 +125,14 @@ type Language =
 
 interface Projects {
   name: string
-  isActive: boolean
+  isActive?: boolean
+  pinned?: boolean
   description: string
   highlights: Highlight
   url: string
   github?: string
+  image?: string
+  stack?: Array<string>
 }
 
 interface Interests {

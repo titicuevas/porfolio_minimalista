@@ -18,6 +18,12 @@ import SourceTree from "@/icons/sourcetree.astro"
 import Bootstrap from "@/icons/bootstrap.astro"
 import Supabase from "@/icons/supabase.astro"
 import Kanban from "@/icons/kanban.astro"
+import Node from "@/icons/node.astro"
+import Cucumber from "@/icons/cucumber.astro"
+import AstroIcon from "@/icons/astro.astro"
+import Postman from "@/icons/postman.astro"
+import AWS from "@/icons/aws.astro"
+import Scrum from "@/icons/scrum.astro"
 import { skills } from "@cv"
 
 const SKILLS_ICONS = {
@@ -39,16 +45,25 @@ const SKILLS_ICONS = {
   Bootstrap,
   Supabase,
   Kanban,
+  "Node.js": Node,
+  Cucumber,
+  Astro: AstroIcon,
+  Postman,
+  AWS,
+  Scrum,
 }
 
 const frontend = [
-  "HTML", "CSS", "Bootstrap", "Tailwind", "JavaScript", "React", "Astro"
+  "HTML", "CSS", "Bootstrap", "Tailwind", "JavaScript", "React", "Astro", "jsPDF", "PWA"
 ]
 const backend = [
-  "PHP", "Laravel", "Python", "PostgreSQL", "MySQL", "Docker", "Supabase"
+  "Node.js", "PHP", "Laravel", "Python", "PostgreSQL", "MySQL", "Docker", "Supabase"
+]
+const qa = [
+  "Cucumber", "Gherkin", "Testing automatizado"
 ]
 const herramientas = [
-  "Postman", "AWS"
+  "Postman", "AWS", "Vercel"
 ]
 const otras = [
   "WordPress", "SourceTree", "Git", "GitHub", "Scrum", "Kanban"
@@ -73,6 +88,17 @@ const getSkills = (names: string[]): typeof skills => skills.filter((s: { name: 
     <h3>Backend</h3>
     <ul class="skills-chips-row">
       {getSkills(backend).map(({ name }) => {
+        const Icon = SKILLS_ICONS[name as keyof typeof SKILLS_ICONS]
+        return (
+          <li class="skill-chip" title={name}>{Icon && <Icon title={name} /> }<span>{name}</span></li>
+        )
+      })}
+    </ul>
+  </div>
+  <div class="skills-group">
+    <h3>QA / Testing</h3>
+    <ul class="skills-chips-row">
+      {getSkills(qa).map(({ name }) => {
         const Icon = SKILLS_ICONS[name as keyof typeof SKILLS_ICONS]
         return (
           <li class="skill-chip" title={name}>{Icon && <Icon title={name} /> }<span>{name}</span></li>
@@ -202,5 +228,15 @@ const getSkills = (names: string[]): typeof skills => skills.filter((s: { name: 
   .skill-chip svg[title="Postman"] {
     color: #222;
     stroke: #222;
+  }
+  html.dark .skill-chip svg[title="Cucumber"] {
+    color: #23D160;
+    fill: #23D160;
+    stroke: #23D160;
+  }
+  .skill-chip svg[title="Cucumber"] {
+    color: #23D160;
+    fill: #23D160;
+    stroke: #23D160;
   }
 </style>

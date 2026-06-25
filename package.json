@@ -10,11 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.4",
-    "astro": "^5.11.1",
-    "hotkeypad": "0.1.1",
-    "minimalist-portfolio-json": "file:",
+    "@astrojs/check": "^0.9.9",
+    "astro": "^7.0.2",
+    "hotkeypad": "^1.0.2",
     "ninja-keys": "^1.2.2",
-    "typescript": "5.6.3"
+    "typescript": "^6.0.3"
   }
 }

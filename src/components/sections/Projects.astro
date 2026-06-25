@@ -2,7 +2,12 @@
 import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
 
-import { projects } from "@cv"
+import { projects as allProjects } from "@cv"
+
+const projects = [
+  ...allProjects.filter((p) => p.pinned),
+  ...allProjects.filter((p) => !p.pinned),
+]
 ---
 
 <Section title="Proyectos">
