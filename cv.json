@@ -31,17 +31,18 @@
     {
       "name": "Indra / Minsait",
       "position": "Ingeniero de Calidad (QE)",
-      "startDate": "2025-01",
+      "startDate": "2025-10",
       "endDate": "Actualmente",
-      "summary": "Ingeniero de calidad en un proyecto interno del BBVA, centrado en la automatización de pruebas y la mejora de la calidad del software en entornos empresariales. Desarrollo de suites de testing con Node.js y JavaScript, implementación de escenarios BDD con Cucumber y Gherkin, y colaboración estrecha con equipos de desarrollo para integrar las pruebas en el ciclo de entrega. Análisis de requisitos, diseño de casos de prueba, ejecución de regresiones y mantenimiento de frameworks de automatización.",
+      "summary": "Ingeniero de calidad en un proyecto interno del BBVA, centrado en la automatización de pruebas y la validación del funcionamiento de diferentes aplicaciones. Desarrollo de suites de testing con Node.js y JavaScript, implementación de escenarios BDD con Cucumber y Gherkin, y colaboración estrecha con equipos de desarrollo para integrar las pruebas en el ciclo de entrega. Análisis de requisitos, diseño de casos de prueba, ejecución de regresiones y mantenimiento de frameworks de automatización.",
       "highlights": [
         "Automatización de pruebas E2E y de integración en proyecto bancario.",
+        "Diseño y desarrollo de pruebas funcionales por escenarios.",
         "Desarrollo de escenarios BDD con Cucumber y Gherkin.",
         "Frameworks y utilidades de testing en Node.js y JavaScript.",
         "Colaboración con equipos ágiles en entorno corporativo."
       ],
-      "url": "https://www.minsait.com/",
-      "stack": ["Node.js", "JavaScript", "Cucumber", "Git"]
+      "url": "https://www.minsait.com/es",
+      "stack": ["Node.js", "JavaScript", "Cucumber", "Tesito", "Git"]
     },
     {
       "name": "Desarrollador Web Autónomo",
