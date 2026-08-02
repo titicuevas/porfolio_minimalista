@@ -277,6 +277,46 @@
     {
       "name": "Vercel",
       "keywords": ["DevOps", "Deploy", "Hosting"]
+    },
+    {
+      "name": "TypeScript",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Tipado Estático"]
+    },
+    {
+      "name": "Next.js",
+      "keywords": ["Desarrollo Web", "Frontend", "React Framework", "Fullstack"]
+    },
+    {
+      "name": "Express",
+      "keywords": ["Desarrollo Web", "Backend", "Node.js", "API"]
+    },
+    {
+      "name": "Vite",
+      "keywords": ["Desarrollo Web", "Frontend", "Build Tool", "Herramientas de Desarrollo"]
+    },
+    {
+      "name": "Zod",
+      "keywords": ["Validación", "TypeScript", "Backend", "Frontend"]
+    },
+    {
+      "name": "React Hook Form",
+      "keywords": ["Desarrollo Web", "Frontend", "React", "Formularios"]
+    },
+    {
+      "name": "Zustand",
+      "keywords": ["Desarrollo Web", "Frontend", "React", "Estado Global"]
+    },
+    {
+      "name": "TanStack Query",
+      "keywords": ["Desarrollo Web", "Frontend", "React", "Data Fetching"]
+    },
+    {
+      "name": "Vitest",
+      "keywords": ["Testing", "Unit Testing", "JavaScript", "TypeScript"]
+    },
+    {
+      "name": "Playwright",
+      "keywords": ["Testing", "E2E", "Automatización", "QA"]
     }
   ],
   "languages": [
@@ -294,6 +334,36 @@
     }
   ],
   "projects": [
+    {
+      "name": "Pujazo",
+      "isActive": true,
+      "description": "Asistente independiente para fantasy fútbol en España. Introduces tu equipo, saldo, mercado y reglas de liga, y un motor local determinista te propone un plan de fichajes, ventas, pujas y alineación.",
+      "highlights": [
+        "Motor local de recomendaciones sin IA externa",
+        "Asistente multi-paso con validaciones",
+        "Copiar, descargar y compartir resultados",
+        "Pruebas unitarias y e2e"
+      ],
+      "url": "https://pujazo.vercel.app",
+      "github": "https://github.com/titicuevas/Pujazo/tree/develop",
+      "stack": ["Next.js", "TypeScript", "Tailwind CSS", "React Hook Form", "Zod", "Vitest", "Playwright"],
+      "image": "/Pujazo.png"
+    },
+    {
+      "name": "Ninety",
+      "isActive": true,
+      "description": "Diario futbolero para guardar y revivir todos los partidos que has visto. Inspirada en Letterboxd y Strava: registra partidos, recuerdos, valoraciones, fotos y genera estadísticas personales.",
+      "highlights": [
+        "Registro de partidos y recuerdos",
+        "Estadísticas personales",
+        "Auth y storage con Supabase",
+        "Datos de competiciones vía Football API"
+      ],
+      "url": "https://ninety.up.railway.app",
+      "github": "https://github.com/titicuevas/Ninety",
+      "stack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Supabase", "Zustand", "TanStack Query"],
+      "image": "/Ninety.png"
+    },
     {
       "name": "Sportbuddy",
       "pinned": true,
